@@ -1,0 +1,10 @@
+<body style="margin-left: 50px;margin-right: 50px">
+<div>
+  Vous venez de refuser la fiche de  refuser la fiche de <% @etu=Etudiant.find_by id: @fichestage.etudiant_id %>
+  <span style="font-weight: bold;text-transform: uppercase">
+    <%=@etu.prenom %>
+    <%=@etu.nom %>
+  </span>
+
+</div>
+</body>

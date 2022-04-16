@@ -1,0 +1,73 @@
+<div class="bandeauSuperieur d-flex justify-content-center">
+  <span class="mx-4 uppercase font-bold">Promotions & Formations</span>
+</div>
+<div class="d-flex justify-content-end mb-4">
+  <%= link_to new_promotion_path, remote: true, class: 'btn btn-outline-secondary',
+              data: { "bs-toggle": 'modal', "bs-target": '#newPromotionModal' } do %>
+    <%= fa_icon "plus", class: "fa-lg me-1" %> Nouvelle promotion
+  <% end %>
+</div>
+<div class="card-body p-2">
+  <table class="table tableBleu">
+    <thead>
+    <tr>
+      <th scope="col">Année</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Formations</th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @promotions.each do |p| %>
+      <tr>
+        <td>
+          Promotion <%= p.annee  %>
+        </td>
+        <td>
+          <% if p.OUVERTE? %>
+            <span class="badge bg-success"><%= Promotion.statuts[:OUVERTE] %></span>
+          <% else %>
+            <span class="badge bg-danger"><%= Promotion.statuts[:CLOTUREE] %></span>
+          <% end %>
+        </td>
+        <td>
+          <ul class="list-group">
+          <span>
+          <% p.formations.each_with_index do |f, i| %>
+              <%= f.mention %><%= ', ' if i != p.formations.count - 1 %>
+          <% end %>
+          </span>
+          </ul>
+        </td>
+        <td class="text-end">
+          <!--<% if p.statut == 'OUVERTE' %>
+          <%= link_to close_promotion_path(p), method: 'put', class: 'me-2' do %>
+            <% fa_icon "close", class: 'text-danger' %>
+          <% end %>
+        <% end %>-->
+
+          <%= link_to promotion_path(p), class: 'me-2' do %>
+            <% fa_icon "chevron-right", class: 'fa-2x' %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+
+
+  <!-- New Promotion Modal -->
+  <div class="modal fade" id="newPromotionModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="newPromotionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="newPromotionModalLabel">Nouvelle promotion</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body inner-import-new">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

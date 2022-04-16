@@ -1,0 +1,166 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<body style="margin-left: 50px;margin-right: 50px">
+<div style="margin-left: 10%">
+
+
+<div class="bandeauSuperieur d-flex justify-content-center" style="margin-right: 90px;margin-left: 140px;">
+  <span class="mx-4 uppercase font-bold"> Nouvelle Offre</span>
+</div>
+<br/><br/>
+
+<div class="content">
+  <%= form_with model: @proposal do |form| %>
+    <div class="row">
+      <div class="col-6 vertical-line">
+
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <h2>Informations Générales</h2>
+            <div>
+              <div class="full-field">
+                <%= form.label :entreprise, " Entreprise" %>
+                <%= form.text_field :entreprise %>
+              </div>
+              <br/>
+              <div class="row">
+                <div class="col-6 half-field">
+                  <%= form.label :typecontrat %>
+                  <%= form.select :typecontrat, ["STAGE","ALTERNANCE", "CDD","CDI"] %>
+                </div>
+                <div class="col-6 half-field">
+                  <%= form.label :rh %><br>
+                  <%= form.text_field :rh%>
+                </div>
+              </div>
+              <br/>
+              <div class="row">
+                <div class="col-6 half-field">
+                  <%= form.label :duree %>
+                  <%= form.text_field :duree %>
+                </div>
+                <div class="col-6 half-field">
+                  <%= form.label :email %>
+                  <%= form.text_field :email %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+        <br/><br/><br/>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <h2>Contact</h2>
+            <div>
+              <div class="full-field">
+                <%= form.label :telephone, "Contact" %><br>
+                <%= form.text_field :telephone %>
+              </div>
+              <br/>
+              <div class="full-field">
+                <%= form.label :adresse, "adresse" %><br>
+                <%= form.text_field :adresse %>
+              </div>
+              <br/>
+              <div class="full-field">
+                <%= form.label :ville, "ville" %><br>
+                <%= form.text_field :ville %>
+              </div>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+        <br/><br/><br/>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <h2></h2>
+            <div>
+              <div class="full-field">
+                <%= form.label :technologie %><br>
+                <%= form.text_field :technologie%>
+              </div>
+              <br/>
+              <div class="full-field">
+                <%= form.label :url, "url" %><br>
+                <%= form.text_field :url %>
+              </div>
+              <br/>
+
+              <br/>
+
+              <br/>
+              <br>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <h2>Informations sur l'entreprise</h2>
+            <div>
+              <div class="full-field">
+                <%= form.label :sujet, "sujet" %><br>
+                <%= form.text_field :sujet %>
+              </div>
+              <div class="full-field">
+                <%= form.label :reference, "reference" %><br>
+                <%= form.text_field :reference %>
+              </div>
+
+              <div class="full-field">
+                <%= form.label :description, "Description de l'offre" %><br>
+                <%= form.text_area :description, size:"40x20" %>
+              </div>
+              <div class="field">
+                <%=form.label :file %>
+                <%=form.file_field :file %>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <% unless @proposal.errors.full_messages.blank? %>
+              <h2> Erreurs sur le formulaire</h2>
+              <%= @proposal.errors.full_messages %>
+            <% end %>
+          </div>
+          <div class="col-2"></div>
+        </div>
+        <br/><br/><br/>
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-10">
+            <div class="row">
+              <div class="col-4">
+                <%= form.submit "Enregistrer", formaction: proposals_path , class: "btn btn-primary btn-round" %>
+              </div>
+
+              <div class="col-4 btn-end">
+                <%= link_to "Annuler", :back, class: "btn btn-primary btn-round"%>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="col-1"></div>
+        </div>
+
+      </div>
+
+    </div>
+  <% end %>
+</div>
+</div>
+</body>

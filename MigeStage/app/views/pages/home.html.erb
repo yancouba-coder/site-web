@@ -1,0 +1,73 @@
+<!-- Masthead-->
+
+<!-- Latest compiled and minified CSS -->
+
+
+
+<header class="masthead" style="margin-left: 50px; margin-right: 50px">
+  <div class="container">
+    <div class="masthead-subheading">Bienvenue sur le site des stages de la MIAGE de l'Université de Bordeaux !</div>
+
+  </div>
+</header>
+<!-- Services-->
+
+<body style="margin-left: 50px;margin-right: 50px;">
+<!-- c'est ici qu'il faut gérer l'affichage des tableaux de bordsServices-->
+<% def guid_responsable_stage_sign_up_path
+     # code here
+   end
+   if etudiant_signed_in? or tuteur_universitaire_signed_in? or responsable_stage_signed_in?%>
+
+<%else %>
+<div class="backgrd">
+
+
+<div style="">
+
+  <div style="margin-left: 20px"><i class="glyphicon glyphicon-education"></i><%= link_to 'S\'inscrire étudiant', guid_etudiant_sign_up_path, class: 'btn btn-round btn-xl text-uppercase mb-2' %> </div>
+<div style="margin-left: 20px"><i class="glyphicon glyphicon-education"></i><%= link_to 'Se connecter étudiant', etudiant_session_path, class: 'btn btn-round btn-xl text-uppercase mb-2' %></div>
+
+  <div style="margin-left: 20px"> <i class="glyphicon glyphicon-user"></i><%= link_to 'S\'inscrire tuteur universitaire', guid_tuteur_universitaire_sign_up_path, class: 'btn btn-round btn-xl text-uppercase mb-2' %> </div>
+  <div style="margin-left: 20px"> <i class="glyphicon glyphicon-user"></i><%= link_to 'Se connecter tuteur universitaire', tuteur_universitaire_session_path, class: 'btn btn-round btn-xl text-uppercase mb-2' %> </div>
+
+
+  <div style="margin-left: 20px"><i class="glyphicon glyphicon-user"></i><%= link_to 'Se connecter responsable des stages', responsable_stage_session_path, class: 'btn btn-round btn-xl text-uppercase mb-2' %></div>
+
+</div>
+<%end %>
+
+<section class="page-section" id="services">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Les acteurs :</h2>
+      <h3 class="section-subheading text-muted">Une plateforme, divers acteurs.</h3>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-4" id="res">
+                        <span class="fa-stack fa-4x">
+                            <%= fa_icon "graduation-cap", class: "fa-stack-2x text-primary text-dark" %>
+                        </span>
+        <h4 class="">Responsable des stages</h4>
+        <p class="text-muted">Gestion des offres des stages, edition des grilles d'evaluation et de la notation, statiques sur l'evolution des etudiants</p>
+      </div>
+      <div class="col-md-4" id="tuteur">
+                        <span class="fa-stack fa-4x">
+                            <%= fa_icon "user-circle", class: "fa-stack-2x text-primary text-dark" %>
+                        </span>
+        <h4 class="">Tuteurs pédagogiques</h4>
+        <p class="text-muted">Suivi des stages, attribution des notes pour les etudiants encadrer et
+          suivre etudiants</p>
+      </div>
+      <div class="col-md-4" id="etudiant">
+                        <span class="fa-stack fa-4x">
+                            <%= fa_icon "user-secret", class: "fa-stack-2x text-primary text-dark" %>
+                        </span>
+        <h4 class="">Etudiants</h4>
+        <p class="text-muted">Consultation des offres de stages et des notes attribuées pour le stage.
+          Dépôt et télechargement des fiches d'évaluation </p>
+      </div>
+    </div>
+  </div>
+  </section>
+</div>

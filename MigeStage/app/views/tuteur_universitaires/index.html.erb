@@ -1,0 +1,78 @@
+
+
+  <div class="bandeauSuperieur d-flex justify-content-center">
+    <span class="mx-4 uppercase font-bold">Liste des Tuteurs Universitaire</span>
+  </div>
+
+  <div class="card-body p-2">
+    <table class="table table-hover tableBleu">
+      <thead>
+      <tr>
+        <th class="text-center">Nom Prénom</th>
+        <th class="text-center">Statut</th>
+        <th class="text-center">Fonction</th>
+        <th class="text-center">Lieu d'activité</th>
+        <th class="text-center">Adresse Email Professionnel</th>
+        <th class="text-center">
+          <%= link_to new_tuteur_universitaire_path(@tuteur_universitaire), remote: true, class: 'btn btn-primary me-2',
+                      data: { "bs-toggle": 'modal', "bs-target": '#newTuteurModal' } do %>
+            <% fa_icon "plus", class: "fa-2x" %> Ajouter un tuteur
+          <% end %>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @tuteur_universitaires.each do |t| %>
+        <tr>
+          <td class="text-center"><%= t.nom %> <%= t.prenom %></td>
+          <td class="text-center"><%= t.statut_encadrant %></td>
+          <td class="text-center"><%= t.fonction %></td>
+          <td class="text-center"><%= t.localisation %></td>
+          <td class="text-center"><%= t.email %></td>
+          <td class="text-center">
+            <%= link_to tuteur_universitaire_url(t), class: 'btn btn-primary' do %>
+              <% fa_icon "user", class: "fa-2x" %>
+            <% end %>
+            <%= link_to edit_tuteur_universitaire_path(t), remote: true, class: 'btn btn-secondary',
+                        data: { "bs-toggle": 'modal', "bs-target": '#editTuteurModal' } do %>
+              <% fa_icon "edit", class: "fa-2x" %>
+            <% end %>
+            <%= link_to tuteur_universitaire_url(t), method: :delete, class: 'btn btn-danger',
+                        data: { confirm: "Etes-vous sûr de vouloir supprimer ce tuteur ?" } do %>
+              <% fa_icon "trash", class: "fa-2x" %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- New Modal -->
+  <div class="modal fade" id="newTuteurModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="newTuteurModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="newTuteurModalLabel">Nouveau Tuteur Universitaire</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body inner-import-new">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Modal -->
+  <div class="modal fade" id="editTuteurModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editTuteurModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editTuteurModalLabel">Modifier un tuteur universitaire</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body inner-import-edit">
+        </div>
+      </div>
+    </div>
+  </div>
+

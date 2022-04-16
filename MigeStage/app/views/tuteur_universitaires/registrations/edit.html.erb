@@ -1,0 +1,57 @@
+<h2>Edition profile  <%= resource_name.to_s.humanize %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "tuteur_universitaires/shared/error_messages", resource: resource %>
+
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="field mb-3">
+        <%= f.label :email, 'Email universitaire', class: 'form-label' %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control'%>
+      </div>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+      <div class="field mb-3">
+        <%= f.label :password,'Mot de passe', class: 'form-label' %> <i>(laissez vide si vous ne voulez pas le changer )</i><br />
+        <%= f.password_field :password, autocomplete: "new-password",class: 'form-control' %>
+        <% if @minimum_password_length %>
+          <br />
+          <em><%= @minimum_password_length %> caractères minimum</em>
+        <% end %>
+      </div>
+
+      <div class="field mb-3">
+        <%= f.label :password_confirmation, 'Confirmation du mot de passe', class: 'form-label'%><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+      </div>
+
+      <div class="field mb-3">
+        <%= f.label :current_password, 'Mot de passe actuel' %> <i>(nous avons besoin de votre mot de passe actuel pour confirmer vos modifications)</i><br />
+        <%= f.password_field :current_password, autocomplete: "current-password", class: 'form-control' %>
+      </div>
+      <div class="mb-3">
+        <%= f.label :fonction,'Fonction', class: 'form-label' %><br>
+        <%= f.text_field :fonction, class: 'form-control' %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :localisation,'Localisation', class: 'form-label' %><br>
+        <%= f.text_field :localisation, class: 'form-control' %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :statut_encadrant, 'Statut encadrant', class: 'form-label' %><br>
+        <%= f.select :statut_encadrant, TuteurUniversitaire.statut_encadrants.keys, {}, { class: 'form-select' } %>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="actions d-flex justify-content-start mb-2">
+    <%= f.submit "Mise à jour", class: 'btn btn-primary' %>
+  </div>
+  <%= link_to "retour", :back %>
+<% end %>

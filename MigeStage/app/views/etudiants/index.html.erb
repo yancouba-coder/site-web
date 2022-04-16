@@ -1,0 +1,56 @@
+<% if responsable_stage_signed_in? %>
+<p id="notice"><%= notice %></p>
+
+<h1>Liste des étudiants inscrits</h1>
+  <style>
+      tr{
+          border: #BBBBBB solid 1em;
+      }
+      table{
+          border: #BBBBBB solid
+      }
+  </style>
+
+<table>
+  <thead>
+  <tr>
+    <th>Num etudiant</th>
+    <th>Nom</th>
+    <th>Prenom</th>
+    <th>Email universitaire</th>
+    <th>Email personnel</th>
+    <th>Statut arrivant l3</th>
+    <th>Mention</th>
+    <th>Stage</th>
+    <th>Alternance</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @etudiants.each do |etudiant| %>
+    <tr>
+      <td><%= etudiant.num_etudiant %></td>
+      <td><%= etudiant.nom %></td>
+      <td><%= etudiant.prenom %></td>
+      <td><%= etudiant.email_universitaire %></td>
+      <td><%= etudiant.email_personnel %></td>
+      <td><%= etudiant.statut_arrivant_L3 %></td>
+      <td><%=etudiant.mention %></td>
+      <td><%= etudiant.stage %></td>
+      <td><%= etudiant.alternance %></td>
+
+      <td><%= link_to 'Consulter', etudiant %></td>
+      <td><%= link_to 'Editer', edit_etudiant_path(etudiant) %></td>
+      <td><%= button_to 'Supprimer', etudiant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+  <%else %>
+  <p> Oups !! Vous n'êtes pas autorisé </p>
+<%end %>>
+
+

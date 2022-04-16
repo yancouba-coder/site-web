@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Num etudiant:</strong>
+  <%= @liste_etudiant.num_etudiant %>
+</p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @liste_etudiant.nom %>
+</p>
+
+<p>
+  <strong>Prenom:</strong>
+  <%= @liste_etudiant.prenom %>
+</p>
+
+<p>
+  <strong>Email universitaire:</strong>
+  <%= @liste_etudiant.email_universitaire %>
+</p>
+
+<p>
+  <strong>Email personnel:</strong>
+  <%= @liste_etudiant.email_personnel %>
+</p>
+
+<p>
+  <strong>Statut arrivant l3:</strong>
+  <%= @liste_etudiant.statut_arrivant_L3 %>
+</p>
+
+<p>
+  <strong>Mention:</strong>
+  <%= @liste_etudiant.mention %>
+</p>
+
+<p>
+  <strong>Stage:</strong>
+  <%= @liste_etudiant.stage %>
+</p>
+
+<p>
+  <strong>Alternance:</strong>
+  <%= @liste_etudiant.alternance %>
+</p>
+
+<%= link_to 'Edit', edit_liste_etudiant_path(@liste_etudiant) %> |
+<%= link_to 'Back', liste_etudiants_path %>

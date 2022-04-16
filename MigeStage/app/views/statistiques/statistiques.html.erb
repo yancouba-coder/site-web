@@ -1,0 +1,243 @@
+<%= stylesheet_link_tag "statistiques.css" %>
+<div class="bandeauSuperieur d-flex justify-content-center">
+  <span class="mx-4 uppercase font-bold">Statistiques</span>
+</div>
+<div class="container drop py-3">
+  <select class="dropdown" name="promo" required onChange="window.location.href=this.value">
+
+    <% if @filtre == 'tout' then %>
+      <option selected class="dropdown-item" value="./statistiques">Toutes les promotions</option>
+    <% else %>
+      <option class="dropdown-item" value="./statistiques">Toutes les promotions</option>
+    <% end %>
+    <% if @filtre == 'L3' then %>
+      <option selected class="dropdown-item" value="./statistiques?filtre=L3">L3 MIAGE</option>
+    <% else %>
+      <option class="dropdown-item" value="./statistiques?filtre=L3">L3 MIAGE</option>
+    <% end %>
+    <% if @filtre == 'M1' then %>
+      <option selected class="dropdown-item" value="./statistiques?filtre=M1">M1 MIAGE</option>
+    <% else %>
+      <option class="dropdown-item" value="./statistiques?filtre=M1">M1 MIAGE</option>
+    <% end %>
+    <% if @filtre == 'M2' then %>
+      <option selected class="dropdown-item" value="./statistiques?filtre=M2">M2 MIAGE</option>
+    <% else %>
+      <option class="dropdown-item" value="./statistiques?filtre=M2">M2 MIAGE</option>
+    <% end %>
+
+  </select>
+</div>
+<div id="wrapper" class="wrapperStatistiques">
+  <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content">
+      <div class="container-fluid">
+        <div class="mx-3 mt-4 mb-3">
+          <span class="titre uppercase font-bold text-darkgrey">Auto Evaluation</span>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-4 d-flex justify-content-center">
+            <div class="card shadow mb-4 mx-5">
+              <div class="card-header py-3">
+                <span class="font-bold">Etudiants ayant rempli la fiche d'auto-evaluation</span>
+              </div>
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div class="d-flex justify-content-center py-5">
+                  <div class="d-flex justify-content-end align-items-center" style = "font-size: 4rem;color: green;margin-right: 3rem;">
+                    <%= fa_icon "check", class: "fa-xl" %>
+                  </div>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <span class="pourcentage"><%= @pourcentageEtudiantAutoEvaluation %>%</span>
+                  </div>
+                </div>
+                <% if @filtre == 'L3' then %>
+                  <a class="mb-2"  href="./tableEtudiant?auto=1&final=0&mention=L3">Liste des etudiants qui ne l'ont pas effectué</a>
+                <% else %>
+                  <% if @filtre == 'M1' then %>
+                    <a class="mb-2"  href="./tableEtudiant?auto=1&final=0&mention=M1">Liste des etudiants qui ne l'ont pas effectué</a>
+                  <% else %>
+                    <% if @filtre == 'M2' then %>
+                      <a class="mb-2"  href="./tableEtudiant?auto=1&final=0&mention=M2">Liste des etudiants qui ne l'ont pas effectué</a>
+                    <% else %>
+                      <a class="mb-2"  href="./tableEtudiant?auto=1&final=0">Liste des etudiants qui ne l'ont pas effectué</a>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4 d-flex justify-content-center">
+            <div class="card shadow mb-4 mx-5">
+              <div class="card-header py-3">
+                <span class="font-bold">Etudiants ayant rempli la fiche d'auto-evaluation finale</span>
+              </div>
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div class="d-flex justify-content-center py-5">
+                  <div class="d-flex justify-content-end align-items-center" style = "font-size: 4rem;color: green;margin-right: 3rem;">
+                    <%= fa_icon "check", class: "fa-xl" %>
+                  </div>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <span class="pourcentage"><%= @pourcentageEtudiantAutoEvaluationFinal %>%</span>
+                  </div>
+                </div>
+                <% if @filtre == 'L3' then %>
+                  <a class="mb-2"  href="./tableEtudiant?auto=1&final=1&mention=L3">Liste des etudiants qui ne l'ont pas effectué</a>
+                <% else %>
+                  <% if @filtre == 'M1' then %>
+                    <a class="mb-2"  href="./tableEtudiant?auto=1&final=1&mention=M1">Liste des etudiants qui ne l'ont pas effectué</a>
+                  <% else %>
+                    <% if @filtre == 'M2' then %>
+                      <a class="mb-2"  href="./tableEtudiant?auto=1&final=1&mention=M2">Liste des etudiants qui ne l'ont pas effectué</a>
+                    <% else %>
+                      <a class="mb-2"  href="./tableEtudiant?auto=1&final=1">Liste des etudiants qui ne l'ont pas effectué</a>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="mx-3 mt-4 mb-3">
+          <span class="titre uppercase font-bold text-darkgrey">Visites en entreprise - Grille d'évaluation</span>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-4 d-flex justify-content-center">
+            <div class="card shadow mb-4 mx-5">
+              <div class="card-header py-3">
+                <span class="font-bold">Visites en entreprise effectuées (grilles d'évaluation remplies)</span>
+              </div>
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div class="d-flex justify-content-center py-5">
+                  <div class="d-flex justify-content-end align-items-center" style = "font-size: 4rem;color: green;margin-right: 3rem;">
+                    <%= fa_icon "check", class: "fa-xl" %>
+                  </div>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <span class="pourcentage"><%= @pourcentageEtudiantGrilleEvaluation %>%</span>
+                  </div>
+                </div>
+                <% if @filtre == 'L3' then %>
+                  <a class="mb-2"  href="./tableEtudiant?auto=0&final=0&mention=L3">Liste des responsables qui ne l'ont pas effectué</a>
+                <% else %>
+                  <% if @filtre == 'M1' then %>
+                    <a class="mb-2"  href="./tableEtudiant?auto=0&final=0&mention=M1">Liste des responsables qui ne l'ont pas effectué</a>
+                  <% else %>
+                    <% if @filtre == 'M2' then %>
+                      <a class="mb-2"  href="./tableEtudiant?auto=0&final=0&mention=M2">Liste des responsables qui ne l'ont pas effectué</a>
+                    <% else %>
+                      <a class="mb-2"  href="./tableEtudiant?auto=0&final=0">Liste des responsables qui ne l'ont pas effectué</a>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4 d-flex justify-content-center">
+            <div class="card shadow mb-4 mx-5">
+              <div class="card-header py-3">
+                <span class="font-bold">Visites en entreprise finale effectuées (grilles d'évaluation remplies)</span>
+              </div>
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div class="d-flex justify-content-center py-5">
+                  <div class="d-flex justify-content-end align-items-center" style = "font-size: 4rem;color: green;margin-right: 3rem;">
+                    <%= fa_icon "check", class: "fa-xl" %>
+                  </div>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <span class="pourcentage"><%= @pourcentageEtudiantGrilleEvaluationFinal %>%</span>
+                  </div>
+                </div>
+                <% if @filtre == 'L3' then %>
+                  <a class="mb-2"  href="./tableEtudiant?auto=0&final=1&mention=L3">Liste des responsables qui ne l'ont pas effectué</a>
+                <% else %>
+                  <% if @filtre == 'M1' then %>
+                    <a class="mb-2"  href="./tableEtudiant?auto=0&final=1&mention=M1">Liste des responsables qui ne l'ont pas effectué</a>
+                  <% else %>
+                    <% if @filtre == 'M2' then %>
+                      <a class="mb-2"  href="./tableEtudiant?auto=0&final=1&mention=M2">Liste des responsables qui ne l'ont pas effectué</a>
+                    <% else %>
+                      <a class="mb-2"  href="./tableEtudiant?auto=0&final=1">Liste des responsables qui ne l'ont pas effectué</a>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mx-3 mt-4 mb-3">
+          <span class="titre uppercase font-bold text-darkgrey">Notation d'entreprise </span>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-4 d-flex justify-content-center">
+            <div class="card shadow mb-4 mx-5">
+              <div class="card-header py-3">
+                <span class="font-bold">Etudiants dont la note d’entreprise a été attribuée</span>
+              </div>
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div class="d-flex justify-content-center py-5">
+                  <div class="d-flex justify-content-end align-items-center" style = "font-size: 4rem;color: green;margin-right: 3rem;">
+                    <%= fa_icon "check", class: "fa-xl" %>
+                  </div>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <span class="pourcentage"><%= @pourcentageEtudiantNotation %>%</span>
+                  </div>
+                </div>
+                <% if @filtre == 'L3' then %>
+                  <a class="mb-2"  href="./tableEtudiant?note=1&mention=L3">Liste des responsables qui ne l'ont pas effectué</a>
+                <% else %>
+                  <% if @filtre == 'M1' then %>
+                    <a class="mb-2"  href="./tableEtudiant?note=1&mention=M1">Liste des responsables qui ne l'ont pas effectué</a>
+                  <% else %>
+                    <% if @filtre == 'M2' then %>
+                      <a class="mb-2"  href="./tableEtudiant?note=1&mention=M2">Liste des responsables qui ne l'ont pas effectué</a>
+                    <% else %>
+                      <a class="mb-2"  href="./tableEtudiant?note=1">Liste des responsables qui ne l'ont pas effectué</a>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4 d-flex justify-content-center">
+            <div class="card shadow mb-4 mx-5">
+              <div class="card-header py-3">
+                <span class="font-bold">Statistiques sur les notes des étudiants</span>
+              </div>
+              <div class="card-body d-flex flex-column justify-content-between">
+                <%= pie_chart @data, colors: ['#F17E4C', '#FFAB87', '#AC9083','#DFD7D3', '#DE7070']%>
+                <% if @filtre == 'L3' then %>
+                  <a class="mb-2"  href="./tableEtudiant?note=1&mention=L3">Liste des etudiants qui ne l'ont pas effectué</a>
+                <% else %>
+                  <% if @filtre == 'M1' then %>
+                    <a class="mb-2"  href="./tableEtudiant?note=1&mention=M1">Liste des etudiants qui ne l'ont pas effectué</a>
+                  <% else %>
+                    <% if @filtre == 'M2' then %>
+                      <a class="mb-2"  href="./tableEtudiant?note=1&mention=M2">Liste des etudiants qui ne l'ont pas effectué</a>
+                    <% else %>
+                      <a class="mb-2"  href="./tableEtudiant?note=1">Liste des etudiants qui ne l'ont pas effectué</a>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+          </div>
+          <div class="col-lg-6 mb-4 d-flex flex-column text-left">
+            <div class="ml-5 pl-3">
+              <span>Légende : </span>
+            </div>
+            <div class="ml-5 pl-3">
+              <% @legend.each do |data| %>
+                <%= "• " + data["valeur"] + " : " + data["libelle"] %>
+                <br>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+

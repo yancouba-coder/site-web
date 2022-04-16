@@ -1,0 +1,184 @@
+
+  <%
+  evaluation =
+    '<li class="nav-item">
+      <a class="nav-link" href="/menuetudiant"><p>EVALUATION</p></a>
+    </li>'.html_safe
+  evolution =
+    '<li class="nav-item">
+      <a class="nav-link" href="/evolution"><p>EVOLUTION</p></a>
+    </li>'.html_safe
+  tableaudebord =
+    '<li class="nav-item">
+      <a class="nav-link" href="/tableaudebord"><p>TABLEAU DE BORD</p></a>
+    </li>'.html_safe
+%>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+  <a class="navbar-brand" href="#"></a>
+  <a href="/"><img class="logo" style="margin-left: 10px;
+    margin-top:-15px;" <%= image_tag(image_url('miage.png'), class: 'image') %>
+
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: 10px;">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+    <ul class="nav navbar-nav navbar-right">
+
+
+      <% if tuteur_universitaire_signed_in? %>
+        <%= tableaudebord %>
+        <%= evolution %>
+        <li class="nav-item" style="margin-right: 15px;margin-left: 15px">
+          <button type="button" ><%= link_to 'Edition profil', edit_tuteur_universitaire_registration_path, :class => 'navbar-link', :style=>' text-decoration:none; color: black;' %></button>
+        </li>
+        <li class="nav-item" style="margin-right: 15px;">
+          <%= button_to "Deconnexion", destroy_tuteur_universitaire_session_path, method: :delete, :class => 'navbar-link' %>
+        </li>
+      <% end %>
+
+      <% if etudiant_signed_in? %>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"  >
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#"></a>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="width: 1250px; height: 70px; background-color: #6c757d;" >
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="height: 70px;">
+              <li class="nav-item">
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="<%= home_path%>" style="color: white">Accueil<span class="sr-only">(current)</span></a>
+              </li>
+              <li> <a class="nav-link" href="<%= edit_etudiant_registration_path %>" style="color: white"> Mon profil <span class="sr-only">(current)</span></a>
+              </li>
+              <li>
+                <a class="nav-link" href="<%= fiche_stages_hisfiche_path%>"style="color: white">Fiche de stage<span class="sr-only">(current)</span></a>
+              </li>
+              <li>
+                <a class="nav-link" href="<%=proposals_visionner_path %>" style="color: white">Consulter les offres<span class="sr-only">(current)</span></a>
+              </li>
+              <li>
+                <a class="nav-link" href="<%=etudiants_ajrapport_path %>" style="color: white">Déposer rapport<span class="sr-only">(current)</span></a>
+              </li>
+              <li>
+                <a class="nav-link" href="#"style="color: white">Reportings<span class="sr-only">(current)</span></a>
+              </li>
+              <li>
+                <a class="nav-link" href="https://ent.u-bordeaux.fr/uPortal/f/welcome/normal/render.uP?u_redirectToDefault=true" target="_blank" rel="noopener noreferrer" style="color: white">
+                  ENT<span class="sr-only">(current)</span></a>
+              </li>
+              <i class="bi bi-person-lines-fill"></i>
+
+            </ul>
+            <span style="text-transform: capitalize"><%= current_etudiant.prenom %></span>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>
+
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="nav-item" style="margin-right: 15px;">
+                <%= link_to 'Déconnexion',destroy_etudiant_session_path  %>
+              </li>
+              </ul>
+            <%= link_to 'Déconnexion',destroy_etudiant_session_path  %>
+
+          </div>
+
+        </nav>
+        <p style="background-color: #8B0146;width: 1250px; height: 2px; margin-left: 2%;margin-right: 7%; display: inline-block" >
+        </p>
+      <% end %>
+
+
+
+      <% if responsable_stage_signed_in? %>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"   >
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="width: 1320px;
+            height: 70px; background-color: #999999;
+            text-align: center; display: block;
+
+            margin-left: 5%;
+          border-radius: 5px;">
+
+
+
+            <li class="nav-item active">
+              <a class="nav-link"  style="display: inline-block"href="<%= home_path%>" style="color: white">Accueil   <span class="sr-only">(current)</span></a>
+            </li>
+            <li style="display: inline-block"> <a class="nav-link" href="<%= edit_responsable_stage_registration_path %>" style="color: white"> Mon profil <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li style="display: inline-block"> <a class="nav-link" href="<%= new_proposal_path %>" style="color: white"> Créer Offre <span class="sr-only">(current)</span></a>
+            </li>
+
+
+            <li style="display: inline-block"> <a class="nav-link" href="<%= proposals_visionner_path %>" style="color: white"> Offres <span class="sr-only">(current)</span></a>
+            </li>
+            <i class="glyphicon glyphicon-bell" style="display: inline-block"></i>
+             <a class="nav-link" href="<%= fiche_stages_liste_a_valider_path %>" style="color: white;display: inline-block" id="fiche"> <strong style="color: #1f1b6a"> <%= current_responsable_stage.compteur %> </strong> Fiches <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" style=" display: inline-block; margin-left: 2%">
+              <select class="dropdown dropdownNavBar" onChange="window.location.href=this.value">
+                <option selected disabled class="dropdown-item" value="">LISTES</option>
+                <option class="dropdown-item" value="<%= promotions_path %>">PROMOTIONS</option>
+                <option class="dropdown-item" value="<%= liste_etudiants_path %>">ETUDIANTS</option>
+                <option class="dropdown-item" value="<%= etudiants_path %>">ETUDIANTS INSCRITS</option>
+                <option class="dropdown-item" value="<%= liste_etudiants_non_inscrit_index_path %>">ETUDIANTS NON INSCRITS</option>
+                <option class="dropdown-item" value="<%= students_requests_students_who_are_in_initial_education_path %>">F. INITIALE</option>
+                <option class="dropdown-item" value="<%= students_requests_students_who_are_on_work_study_programs_path %>">ALTERNANTS</option>
+                <option class="dropdown-item" value="<%= students_requests_students_in_L3_path %>">ETUDIANTS EN L3</option>
+                <option class="dropdown-item" value="<%= students_requests_students_in_M1_path  %>">ETUDIANTS EN M1</option>
+                <option class="dropdown-item" value="<%= students_requests_students_in_M2_path  %>">ETUDIANTS EN M2</option>
+                <option class="dropdown-item" value="<%= entreprises_path %>">ENTREPRISES</option>
+                <option class="dropdown-item" value="<%= tuteur_universitaires_path %>">TUTEURS</option>
+              </select>
+            </li>
+            <li class="nav-item" style="display: inline-block; margin-left: 2%">
+              <select class="dropdown dropdownNavBar" onChange="window.location.href=this.value">
+                <option selected disabled class="dropdown-item" value="">GRILLE</option>
+                <option class="dropdown-item" value="/tableaudebord">TABLEAU DE BORD</option>
+                <option class="dropdown-item" value="/statistiques">STATISTIQUES</option>
+                <option class="dropdown-item" value="/evolution">EVOLUTION</option>
+                <option class="dropdown-item" value="/menurespstage">GRILLE D'EVALUATION</option>
+              </select>
+            </li>
+
+            <li class="nav-item" style="margin-right: 15px; display: inline-block; margin-left: 20% ; color: #BBBBBB">
+           <%= link_to "Deconnexion", destroy_responsable_stage_session_path, method: :delete, :style=>'text-decoration: none; color:#3B170B', :class => 'navbar-link' %>
+        </li>
+
+
+
+
+          </div>
+        </nav>
+        <div style="background-color: #B00100;width: 1250px; height: 2px; margin-left: 5%;margin-right: 1%; display: inline-block" >
+        </div>
+        <script>
+            $('#fiche').click(function (event) {
+                <%= current_responsable_stage.compteur=0
+                current_responsable_stage.save
+                #souvent source de probléme
+                %>
+                event.preventDefault(); // Prevent link from following its href
+            });
+        </script>
+
+      <% end %>
+
+    </ul>
+    <div>
+
+    </div>
+  </div>
+
+</nav>
+

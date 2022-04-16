@@ -1,0 +1,75 @@
+<div class="container">
+
+
+  <% if @promotion_ouvertes.any? %>
+    <h1>Disponibilité des tuteurs</h1>
+
+    <div class="row mb-3">
+      <div class="col text-right">
+        <%= link_to new_disponibilite_path(@disponibilite), remote: true, class: 'btn btn-primary me-2',
+                    data: { "bs-toggle": 'modal', "bs-target": '#newDispoModal' } do %>
+          <% fa_icon "plus", class: "fa-2x" %> Ajouter une disponibilité
+        <% end %>
+      </div>
+    </div>
+
+    <% @promotion_ouvertes.each do |prom| %>
+      <h3>Promotion <%= prom.annee %></h3>
+
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <td class="w-25">Nom Prénom</td>
+          <td class="w-50">Nombre d'étudiant souhaité</td>
+          <td class="w-25">Statut</td>
+          <td></td>
+        </tr>
+        </thead>
+        <tbody>
+        <% prom.disponibilites.each do |d| %>
+          <tr>
+            <td>
+              <%= d.tuteur_universitaire.nom %> <%= d.tuteur_universitaire.prenom %>
+            </td>
+            <td>
+              <%= d.nb_etudiants_souhaite %>
+            </td>
+            <td>
+              <%= d.statut_reponse %>
+            </td>
+            <td>
+              <%= link_to disponibilite_url(d), method: :delete, class: 'btn btn-danger',
+                          data: { confirm: "Etes-vous sûr de vouloir supprimer ce cette disponibilité ?" } do %>
+                <% fa_icon "trash", class: "fa-2x" %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    <% end %>
+
+    </div>
+
+    <!-- New Modal -->
+    <div class="modal fade" id="newDispoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="newDispoModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="newDispoModalLabel">Ajouter une disponibilité</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body inner-import-new">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <% else %>
+    <div class="container">
+      <div class="alert alert-danger" role="alert">
+        Aucune promotion n'est ouverte. Impossible d'ajouter une disponibilité à un tuteur.
+      </div>
+    </div>
+  <% end %>

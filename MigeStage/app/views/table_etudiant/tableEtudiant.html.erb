@@ -1,0 +1,76 @@
+<%= stylesheet_link_tag "tableauDeBord" %>
+<style>
+    tr{
+        border: #BBBBBB solid 1em;
+    }
+    table{
+        border: #BBBBBB solid
+    }
+</style>
+
+
+<div class="bandeauSuperieur d-flex justify-content-center">
+  <span class="mx-4 uppercase font-bold">Liste des étudiants</span>
+</div>
+
+<div class="card-body p-0">
+  <% if @etudiants.present? then %>
+
+      <div class="table-responsive p-2">
+        <table class="table table-bordered tableaudebord tableBleu" id="dataTable" width="100%" cellspacing="0" cellpadding="0">
+          <thead>
+          <tr>
+            <th>Etudiant</th>
+            <th>Promotion</th>
+            <th>Entreprise</th>
+            <th>Email universitaire</th>
+            <th>Tuteur universitaire</th>
+            <th>Email tuteur</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @etudiants.each do |etudiant| %>
+            <tr>
+              <td>
+                <div class="d-flex flex-column justify-content-between">
+                  <span><%= etudiant[1]+' '+etudiant[2] %></span>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex flex-column justify-content-between">
+                  <span><%= etudiant[8] %></span>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex flex-column justify-content-between">
+                  <span><%= etudiant[9] %></span>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex flex-column justify-content-between">
+                  <span><%= etudiant[3] %></span>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex flex-column justify-content-between">
+                  <span><%= etudiant[5]+ ' '+etudiant[6] %></span>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex flex-column justify-content-between">
+                  <span><%= etudiant[7] %></span>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+  <% else %>
+    <br>
+    <div class="card-body" style="text-align: center">
+      Aucun étudiant
+    </div>
+<% end %>
+
+</div>

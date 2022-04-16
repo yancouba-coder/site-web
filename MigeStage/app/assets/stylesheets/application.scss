@@ -1,0 +1,175 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+
+:root {
+  --lightgrey: #F9F9F9;
+  --mediumgrey: #CCCCCC;
+  --darkgrey: #172026;
+  --purple: #8B0146;
+  --purple-transparent: #8B0146BB;
+  --purple-transparent-more: #8B014655;
+  --mediumblue: #231d99;
+  --darkblue: #181552;
+  --darkblue-transparent: #181552DD;
+}
+
+/* Charte graphique */
+.bg-white           {background-color: white!important;}
+.bg-lightgrey       {background-color: var(--lightgrey)!important;}
+.bg-mediumgrey      {background-color: var(--mediumgrey)!important;}
+.bg-darkgrey        {background-color: var(--darkgrey)!important;}
+.bg-purple          {background-color: var(--purple)!important;}
+.bg-mediumblue      {background-color: var(--mediumblue)!important;}
+.bg-darkblue        {background-color: var(--darkblue)!important;}
+
+.text-white         {color: white!important;}
+.text-lightgrey     {color: var(--lightgrey)!important;}
+.text-mediumgrey    {color: var(--mediumgrey)!important;}
+.text-darkgrey      {color: var(--darkgrey)!important;}
+.text-purple        {color: var(--purple)!important;}
+.text-mediumblue    {color: var(--mediumblue)!important;}
+.text-darkblue      {color: var(--darkblue)!important;}
+
+/* Largeurs */
+.w-50 {width: 50%;}
+.w-80 {width: 80%;}
+
+/* Paddings */
+.pl-1 {padding-left: .25rem !important;}
+.pl-2 {padding-left: .5rem !important;}
+.pl-3 {padding-left: 1rem !important;}
+.pl-4 {padding-left: 1.5rem !important;}
+.pl-5 {padding-left: 3rem !important;}
+
+.pr-1 {padding-right: .25rem !important;}
+.pr-2 {padding-right: .5rem !important;}
+.pr-3 {padding-right: 1rem !important;}
+.pr-4 {padding-right: 1.5rem !important;}
+.pr-5 {padding-right: 3rem !important;}
+
+/* Margins */
+.ml-1 {margin-left: .25rem !important;}
+.ml-2 {margin-left: .5rem !important;}
+.ml-3 {margin-left: 1rem !important;}
+.ml-4 {margin-left: 1.5rem !important;}
+.ml-5 {margin-left: 3rem !important;}
+
+.mr-1 {margin-right: .25rem !important;}
+.mr-2 {margin-right: .5rem !important;}
+.mr-3 {margin-right: 1rem !important;}
+.mr-4 {margin-right: 1.5rem !important;}
+.mr-5 {margin-right: 3rem !important;}
+
+/* Alignement du texte */
+.text-right     {text-align: right!important;}
+.text-left      {text-align: left!important;}
+.text-center    {text-align: center!important;}
+
+/* Style de police */
+.font-normal {font-weight: normal !important;}
+
+/* Boutons */
+.btn-round {
+  border-radius: 20px!important;
+  padding-right: 3rem!important;
+  padding-left: 3rem!important;
+  font-weight: bold!important;
+  color: #FFFFFF!important;
+  background-color: var(--purple)!important;
+}
+
+.btn-square {
+  border-radius: 20px!important;
+  padding: 1.5rem!important;
+  font-weight: bold!important;
+  color: #FFFFFF!important;
+  background-color: var(--purple)!important;
+  width: 15rem;
+}
+
+.btn.disabled {
+  color: #FFFFFF !important;
+  background-color: var(--mediumgrey) !important;
+  opacity: 1 !important;
+}
+
+.btn a {
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+}
+
+.btn.btn-sm {
+  padding: 0.25rem 0.75rem !important;
+}
+.btn.btn-xl {
+  font-size: large;
+}
+
+.btn:hover {
+  background-color: var(--darkblue) !important;
+}
+
+/* Boutons radio */
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -4px;
+  left: -1px;
+  position: relative;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid darkgrey;
+  background-color: white;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -4px;
+  left: -1px;
+  position: relative;
+  background-color: darkgrey;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid darkgrey;
+}
+
+/* Boutons switch */
+.form-check-input:checked {
+  background-color: var(--purple) !important;
+  border-color: var(--purple) !important;;
+}
+
+.form-check-input:focus {
+  border-color: var(--purple-transparent) !important;
+  box-shadow: 0 0 0 0.25rem var(--purple-transparent-more) !important;
+}
+
+.form-switch .form-check-input:focus:not(:checked) {
+  border-color: var(--purple-transparent) !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%238B014655'/%3e%3c/svg%3e") !important;
+}
+table td {
+  word-break: break-all;
+}
+
+
+@import "bootstrap/scss/bootstrap";

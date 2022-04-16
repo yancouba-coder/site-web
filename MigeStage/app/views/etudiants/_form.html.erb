@@ -1,0 +1,70 @@
+<%= form_with model: etudiant, remote: true, local: false do |f| %>
+  <div class="mb-3">
+    <%= f.label :formation_ids, 'Formation', class: 'form-label'%>
+    <%= f.collection_select :formation_ids, Formation.order(:libelle), :id, :name_with_initial, {}, class: 'form-select' %>
+
+    <% etudiant.errors.full_messages_for(:num_etudiant).each do |message| %>
+      <div class="text-danger" style="font-size: small"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :num_etudiant, 'Numéro étudiant', class: 'form-label'%>
+    <%= f.text_field :num_etudiant, class: 'form-control' %>
+
+    <% etudiant.errors.full_messages_for(:num_etudiant).each do |message| %>
+      <div class="text-danger" style="font-size: small"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :nom, class: 'form-label' %>
+    <%= f.text_field :nom, class: 'form-control' %>
+
+    <% etudiant.errors.full_messages_for(:nom).each do |message| %>
+      <div class="text-danger" style="font-size: small"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :prenom, 'Prénom', class: 'form-label' %>
+    <%= f.text_field :prenom, class: 'form-control' %>
+
+    <% etudiant.errors.full_messages_for(:prenom).each do |message| %>
+      <div class="text-danger" style="font-size: small"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :email, 'Email universitaire', class: 'form-label' %>
+    <%= f.email_field :email_universitaire, class: 'form-control'%>
+
+    <% etudiant.errors.full_messages_for(:email_universitaire).each do |message| %>
+      <div class="text-danger" style="font-size: small"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :email_personnel, class: 'form-label' %><br>
+    <%= f.text_field :email_personnel, class: 'form-control' %>
+
+    <% etudiant.errors.full_messages_for(:email_personnel).each do |message| %>
+      <div class="text-danger" style="font-size: small"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :statut_arrivant_L3, 'Statut arrivant L3', class: 'form-label' %><br>
+    <%= f.select :statut_arrivant_L3, Etudiant.statut_arrivant_L3s.keys, {}, { class: 'form-select' } %>
+
+    <% etudiant.errors.full_messages_for(:statut_arrivant_L3).each do |message| %>
+      <div class="text-danger" style="font-size: small"><%= message %></div>
+    <% end %>
+  </div>
+
+
+  <div class="actions d-flex justify-content-end">
+    <%= link_to "Annuler", etudiants_path, class: "btn btn-outline-primary me-2"%>
+    <%= f.submit 'Enregistrer', class: 'btn btn-primary' %>
+  </div>
+<% end %>

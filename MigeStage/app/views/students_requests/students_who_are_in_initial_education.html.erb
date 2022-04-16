@@ -1,0 +1,45 @@
+<style>
+    tr{
+        border: #BBBBBB solid 1em;
+    }
+    table{
+        border: #BBBBBB solid
+    }
+</style>
+<h1>Etudiants en formation initiale</h1>
+<div class="card-body p-2 table-responsive">
+
+  <table>
+    <thead>
+    <tr>
+      <th >Numéro étudiant</th>
+      <th >Nom</th>
+      <th >Prénom</th>
+      <th >Email universitaire</th>
+      <th >Email personnel</th>
+      <th >Statut arrivant</th>
+      <th >Mention</th>
+      <th >Stage</th>
+      <th >Alternance</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @initial_education.each do |l| %>
+      <tr>
+        <td><%= l.num_etudiant %></td>
+        <td><%= l.nom %></td>
+        <td><%= l.prenom %></td>
+        <td><%= l.email_universitaire %></td>
+        <td><%= l.email_personnel %></td>
+        <td><%= l.statut_arrivant_L3 %></td>
+        <td><%= l.mention %></td>
+        <td><%= l.stage %></td>
+        <td><%= l.alternance %></td>
+      </tr>
+    <% end %>
+    </table>
+
+
+  <br>
+
+</div>

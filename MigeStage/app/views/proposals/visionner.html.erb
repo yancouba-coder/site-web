@@ -1,0 +1,49 @@
+<% if etudiant_signed_in? or tuteur_universitaire_signed_in? or responsable_stage_signed_in?%>
+<body style="margin-left: 50px;margin-right: 50px;
+">
+
+  <style>
+    a:hover{
+          background-color: #8B0146;
+    }
+  </style>
+
+<div id="offres"style="display: block; margin-left: 10%;
+  ">
+  <% @proposal.each do |proposal| %>
+      <div style="display: inline-block;
+        background-color: white;width: 25%;
+        margin-top: 15px;
+        margin-left: 20px;
+        border-radius: 7px;
+        box-shadow: 6px 6px 0px #aaa;
+        border: solid 1px #E0E0E0;
+        font-weight: bold;
+
+      ">
+        <ul> <h5 style="background-color: #E5CCFF; margin-right: 10%;
+          box-shadow: 3px 3px 0px #aaa;
+          height: 50px;border: solid 1px #E5CCFF; border-bottom-left-radius: 7px; border-bottom-right-radius: 7px;
+        text-align: center;margin-top: 1px;">
+          <i class="glyphicon glyphicon-briefcase"></i>
+          Entreprise : <span style="text-transform: uppercase; font-weight: bold">
+          <%=proposal.entreprise %> </span> </h5></ul>
+        <ul style="color: brown">  Sujet : <%=proposal.sujet %></ul>
+        <ul>  Ville : <%=proposal.ville %></ul>
+        <ul> Technologie: <%=proposal.technologie %></ul>
+        <ul> Statut : <%=proposal.statut %></ul>
+
+        <ul> Publié: <%=proposal.created_at.strftime('%d/%m/%Y') %></ul>
+
+        <button style="text-decoration: none; color: black;
+          background-color: papayawhip;
+          box-shadow: 2px 2px 0px #aaa;
+          margin-bottom: 2px;
+          margin-left: 3px;
+          border-radius: 7px;"><a  style="text-decoration: none; color: black" href="<%=  proposals_voir_path(proposal)%>"> En savoir plus</a> </button>
+         <span style="float: right; margin-right: 2%;"><%=link_to 'Télécharger', proposal.file, download: '' %></span>
+      </div>
+  <% end %>
+</div>
+</body>
+<%end %>

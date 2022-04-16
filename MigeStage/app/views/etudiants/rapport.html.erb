@@ -1,0 +1,12 @@
+<%=form_with(model: @etudiant, loacal: true) do |form| %>
+<div class="field">
+  <%= form.label :rapport%>
+  <%= form.file_field :rapport%>
+  <div class="actions">
+    <button>
+      <%= form.submit "Enregistrer",  class: 'btn btn-primary'%>
+    </button>
+
+  </div>
+</div>
+<%end %>

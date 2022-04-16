@@ -1,0 +1,25 @@
+<body style="margin-left: 50px;margin-right: 50px">
+<div class="bandeauSuperieur d-flex justify-content-center">
+  <span class="mx-4 uppercase font-bold">Fiches de stage</span>
+</div>
+<ul>
+  <% @fichestage.each do |fichestage| %>
+    <li>
+      Fiche n°<%= fichestage.id %> - <%= link_to fichestage.titre, fiche_stage_path(fichestage) %>
+    </li>
+  <% end %>
+</ul>
+
+<% @fichestage_todo.each do |fstd| %>
+  Fiche n°<%= fstd.id %> - <%= link_to fstd.titre, fiche_stages_validate_path(fstd) %>
+<% end %>
+<% @fichestage_draft.each do |fsd| %>
+  <%= fsd.id %>
+<% end %>
+
+<br/><br/>
+<div class="d-flex justify-content-center m-2 pt-5">
+  <button class="btn btn-square btn-sm mx-3"><%= link_to "Nouvelle fiche de stage", new_fiche_stage_path %></button>
+</div>
+
+</body>

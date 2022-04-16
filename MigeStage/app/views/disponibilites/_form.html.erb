@@ -1,0 +1,40 @@
+<%= form_with model: @disponibilite, remote: true, local: false do |form| %>
+
+  <div class="row mb-3">
+    <div class="col">
+      <% disponibilite.errors.full_messages.each do |message| %>
+        <div class="text-danger" style="font-size: small"><%= message %></div>
+      <% end %>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <%= form.label :nb_etudiants_souhaite, 'Nombre d\'étudiant souhaité', class: 'form-label' %>
+      <%= form.number_field :nb_etudiants_souhaite, class: 'form-control' %>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <%= form.label :tuteur_universitaire, 'Tuteur Universitaire', class: 'form-label' %>
+      <%#= form.select :tuteur_universitaire_id, @tuteurs_universitaires.map { |tuteur| [tuteur.nom + " " + tuteur.prenom, tuteur.id] }, {}, { class: 'form-select' } %>
+      <%= form.select :tuteur_universitaire_id, TuteurUniversitaire.all.map { |tuteur| [tuteur.nom + " " + tuteur.prenom, tuteur.id] }, {}, { class: 'form-select' } %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <%= form.label :promotion, 'Promotion', class: 'form-label' %>
+      <%= form.select :promotion_id, Promotion.where(statut: "OUVERTE").map { |p| [p.annee, p.id] }, {}, { class: 'form-select' } %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col"></div>
+    <div class="col text-center">
+      <%= form.submit 'Enregistrer', class: 'btn btn-primary' %>
+    </div>
+    <div class="col"></div>
+  </div>
+  </div>
+
+<% end %>

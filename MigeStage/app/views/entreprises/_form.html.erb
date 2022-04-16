@@ -1,0 +1,43 @@
+<%= form_with model: entreprise, remote: true, local: false do |f| %>
+  <div class="mb-3">
+    <%= f.label :siren, 'SIREN', class: 'form-label' %>
+    <%= f.text_field :siren, class: 'form-control' %>
+
+    <% entreprise.errors.full_messages_for(:siren).each do |message| %>
+      <div class="text-danger" style="font-size: small"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :raison_sociale, class: 'form-label' %>
+    <%= f.text_field :raison_sociale, class: 'form-control' %>
+
+    <% entreprise.errors.full_messages_for(:raison_sociale).each do |message| %>
+      <div class="text-danger" style="font-size: small"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :ville, class: 'form-label' %>
+    <%= f.text_field :ville, class: 'form-control' %>
+
+    <% entreprise.errors.full_messages_for(:ville).each do |message| %>
+      <div class="text-danger" style="font-size: small"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :pays, class: 'form-label' %>
+    <%= f.text_field :pays, class: 'form-control' %>
+
+    <% entreprise.errors.full_messages_for(:pays).each do |message| %>
+      <div class="text-danger" style="font-size: small"><%= message %></div>
+    <% end %>
+  </div>
+
+
+  <div class="d-flex justify-content-end">
+    <%= link_to "Annuler", entreprises_path, class: "btn btn-outline-primary me-2"%>
+    <%= f.submit 'Enregistrer', class: 'btn btn-primary' %>
+  </div>
+<% end %>

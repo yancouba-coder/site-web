@@ -1,0 +1,1079 @@
+[ N 2022-01-18 23:23:30.6132 8459/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ W 2022-01-18 23:23:30.6413 8459/T1 Ser/Server.h:798 ]: [WatchdogApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-18 23:23:30.6846 8462/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-18 23:23:30.6853 8462/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ W 2022-01-18 23:23:30.7518 8462/T1 Ser/AcceptLoadBalancer.h:295 ]: Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ W 2022-01-18 23:23:30.7523 8462/T1 Ser/Server.h:798 ]: [ApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-18 23:23:30.7561 8462/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 8462
+[ N 2022-01-18 23:23:33.1972 8462/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 8550 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 8550 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 8550 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 8550 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 8550 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 8550 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 8550 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 8550 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 8550 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 8550 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 8550 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 8550 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 8550 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 8550 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 8550 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-18 23:23:48.5623 8462/Tr age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: a9bde318
+  Error details saved to: /tmp/passenger-error-vy5Mb2.html
+
+[ E 2022-01-18 23:23:48.5704 8462/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is a9bde318. Please see earlier logs for details about the error.
+App 8575 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 8575 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 8575 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 8575 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 8575 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 8575 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 8575 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 8575 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 8575 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 8575 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 8575 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 8575 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 8575 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 8575 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 8575 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-18 23:24:32.3055 8462/T13 age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: 9d0aac1c
+  Error details saved to: /tmp/passenger-error-5gdfY3.html
+
+[ E 2022-01-18 23:24:32.3170 8462/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 9d0aac1c. Please see earlier logs for details about the error.
+App 8604 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 8604 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 8604 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 8604 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 8604 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 8604 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 8604 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 8604 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 8604 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 8604 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 8604 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 8604 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 8604 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 8604 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 8604 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-18 23:25:09.0611 8462/T1b age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: 0a85129e
+  Error details saved to: /tmp/passenger-error-fJM3n3.html
+
+[ E 2022-01-18 23:25:09.0738 8462/Tc age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 3-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 0a85129e. Please see earlier logs for details about the error.
+App 8629 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 8629 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 8629 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 8629 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 8629 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 8629 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 8629 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 8629 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 8629 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 8629 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 8629 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 8629 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 8629 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 8629 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 8629 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-18 23:27:38.1619 8462/T1j age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: 797c85d1
+  Error details saved to: /tmp/passenger-error-rTQfo5.html
+
+[ E 2022-01-18 23:27:38.1738 8462/Te age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 4-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 797c85d1. Please see earlier logs for details about the error.
+
+[ N 2022-01-18 23:28:59.9552 8462/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-18 23:28:59.9555 8462/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-18 23:28:59.9557 8462/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-18 23:28:59.9558 8462/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-18 23:28:59.9559 8462/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-18 23:28:59.9560 8462/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-18 23:28:59.9560 8462/Tk Ser/Server.h:902 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2022-01-18 23:28:59.9559 8462/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-18 23:28:59.9560 8462/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-18 23:28:59.9559 8462/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-18 23:28:59.9561 8462/Tm Ser/Server.h:902 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2022-01-18 23:28:59.9561 8462/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-18 23:28:59.9566 8462/Tm Ser/Server.h:558 ]: [ServerThr.8] Shutdown finished
+[ N 2022-01-18 23:28:59.9560 8462/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-18 23:28:59.9563 8462/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-18 23:28:59.9566 8462/To Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-18 23:28:59.9562 8462/Tk Ser/Server.h:558 ]: [ServerThr.7] Shutdown finished
+[ N 2022-01-18 23:28:59.9567 8462/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-18 23:28:59.9568 8462/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-18 23:28:59.9569 8462/To Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-18 23:29:00.5311 8462/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2022-01-18 23:37:36.0097 8677/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ W 2022-01-18 23:37:36.0271 8677/T1 Ser/Server.h:798 ]: [WatchdogApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-18 23:37:36.0707 8680/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-18 23:37:36.0714 8680/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ W 2022-01-18 23:37:36.1397 8680/T1 Ser/AcceptLoadBalancer.h:295 ]: Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ W 2022-01-18 23:37:36.1398 8680/T1 Ser/Server.h:798 ]: [ApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-18 23:37:36.1441 8680/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 8680
+[ N 2022-01-18 23:37:38.5190 8680/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 8768 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 8768 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 8768 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 8768 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 8768 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 8768 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 8768 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 8768 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 8768 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 8768 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 8768 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 8768 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 8768 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 8768 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 8768 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-18 23:37:49.6448 8680/Tr age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: dea2b6f3
+  Error details saved to: /tmp/passenger-error-wZVqJy.html
+
+[ E 2022-01-18 23:37:49.6530 8680/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is dea2b6f3. Please see earlier logs for details about the error.
+[ E 2022-01-18 23:37:49.6530 8680/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is dea2b6f3. Please see earlier logs for details about the error.
+App 8797 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 8797 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 8797 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 8797 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 8797 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 8797 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 8797 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 8797 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 8797 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 8797 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 8797 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 8797 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 8797 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 8797 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 8797 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-18 23:38:21.5422 8680/T13 age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: f573b8a0
+  Error details saved to: /tmp/passenger-error-z6Bt0w.html
+
+[ E 2022-01-18 23:38:21.5540 8680/Tc age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 3-1] Cannot checkout session because a spawning error occurred. The identifier of the error is f573b8a0. Please see earlier logs for details about the error.
+
+[ N 2022-01-18 23:56:57.4669 8680/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-18 23:56:57.4671 8680/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-18 23:56:57.4673 8680/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-18 23:56:57.4675 8680/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-18 23:56:57.4676 8680/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-18 23:56:57.4679 8680/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-18 23:56:57.4675 8680/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-18 23:56:57.4679 8680/Tm Ser/Server.h:902 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2022-01-18 23:56:57.4682 8680/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-18 23:56:57.4683 8680/Tm Ser/Server.h:558 ]: [ServerThr.8] Shutdown finished
+[ N 2022-01-18 23:56:57.4677 8680/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-18 23:56:57.4685 8680/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-18 23:56:57.4686 8680/To Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-18 23:56:57.4688 8680/To Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-18 23:56:57.4676 8680/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-18 23:56:57.4682 8680/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-18 23:56:57.4680 8680/Tk Ser/Server.h:902 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2022-01-18 23:56:57.4691 8680/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-18 23:56:57.4691 8680/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-18 23:56:57.4691 8680/Tk Ser/Server.h:558 ]: [ServerThr.7] Shutdown finished
+[ N 2022-01-18 23:56:57.9784 8680/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2022-01-19 00:11:22.0111 8849/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ W 2022-01-19 00:11:22.0386 8849/T1 Ser/Server.h:798 ]: [WatchdogApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 00:11:22.0793 8852/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-19 00:11:22.0799 8852/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ W 2022-01-19 00:11:22.1330 8852/T1 Ser/AcceptLoadBalancer.h:295 ]: Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ W 2022-01-19 00:11:22.1331 8852/T1 Ser/Server.h:798 ]: [ApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 00:11:22.1364 8852/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 8852
+[ N 2022-01-19 00:11:24.5508 8852/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 8940 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 8940 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 8940 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 8940 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 8940 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 8940 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 8940 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 8940 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 8940 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 8940 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 8940 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 8940 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 8940 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 8940 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 8940 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 00:11:38.0251 8852/Tr age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: ec1c5e49
+  Error details saved to: /tmp/passenger-error-licdFy.html
+
+[ E 2022-01-19 00:11:38.0334 8852/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is ec1c5e49. Please see earlier logs for details about the error.
+App 8965 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 8965 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 8965 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 8965 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 8965 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 8965 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 8965 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 8965 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 8965 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 8965 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 8965 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 8965 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 8965 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 8965 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 8965 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 00:12:14.1042 8852/T13 age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: ba176f24
+  Error details saved to: /tmp/passenger-error-RzBaGy.html
+
+[ E 2022-01-19 00:12:14.1156 8852/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is ba176f24. Please see earlier logs for details about the error.
+
+[ N 2022-01-19 00:16:25.9648 8852/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-19 00:16:25.9650 8852/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-19 00:16:25.9652 8852/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-19 00:16:25.9652 8852/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-19 00:16:25.9653 8852/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-19 00:16:25.9654 8852/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-19 00:16:25.9653 8852/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-19 00:16:25.9654 8852/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-19 00:16:25.9656 8852/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-19 00:16:25.9655 8852/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-19 00:16:25.9655 8852/Tm Ser/Server.h:902 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2022-01-19 00:16:25.9658 8852/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-19 00:16:25.9658 8852/Tm Ser/Server.h:558 ]: [ServerThr.8] Shutdown finished
+[ N 2022-01-19 00:16:25.9654 8852/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-19 00:16:25.9654 8852/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-19 00:16:25.9660 8852/To Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-19 00:16:25.9656 8852/Tk Ser/Server.h:902 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2022-01-19 00:16:25.9662 8852/Tk Ser/Server.h:558 ]: [ServerThr.7] Shutdown finished
+[ N 2022-01-19 00:16:25.9661 8852/To Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-19 00:16:25.9661 8852/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-19 00:16:26.4999 8852/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2022-01-19 11:59:54.5658 9964/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ W 2022-01-19 11:59:54.5967 9964/T1 Ser/Server.h:798 ]: [WatchdogApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 11:59:54.6581 9967/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-19 11:59:54.6600 9967/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ W 2022-01-19 11:59:54.7664 9967/T1 Ser/AcceptLoadBalancer.h:295 ]: Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ W 2022-01-19 11:59:54.7666 9967/T1 Ser/Server.h:798 ]: [ApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 11:59:54.7719 9967/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 9967
+[ N 2022-01-19 11:59:57.5019 9967/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 10055 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 10055 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 10055 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 10055 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 10055 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 10055 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 10055 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 10055 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 10055 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 10055 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 10055 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 10055 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 10055 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 10055 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 10055 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 12:00:14.7723 9967/Tr age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: 352cced7
+  Error details saved to: /tmp/passenger-error-LFsbPP.html
+
+[ E 2022-01-19 12:00:14.7840 9967/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 352cced7. Please see earlier logs for details about the error.
+App 10080 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 10080 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 10080 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 10080 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 10080 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 10080 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 10080 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 10080 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 10080 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 10080 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 10080 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 10080 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 10080 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 10080 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 10080 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 12:00:26.0197 9967/T13 age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: 1692bb51
+  Error details saved to: /tmp/passenger-error-QP9m3O.html
+
+[ E 2022-01-19 12:00:26.0309 9967/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 1692bb51. Please see earlier logs for details about the error.
+App 10109 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 10109 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 10109 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 10109 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 10109 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 10109 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 10109 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 10109 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 10109 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 10109 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 10109 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 10109 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 10109 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 10109 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 10109 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 12:00:49.4034 9967/T1b age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: 2cee2daa
+  Error details saved to: /tmp/passenger-error-1LsO9O.html
+
+[ E 2022-01-19 12:00:49.4146 9967/Tc age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 3-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 2cee2daa. Please see earlier logs for details about the error.
+App 10134 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 10134 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 10134 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 10134 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 10134 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 10134 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 10134 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 10134 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 10134 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 10134 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 10134 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 10134 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 10134 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 10134 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 10134 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 12:01:28.6253 9967/T1j age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: fa3c142f
+  Error details saved to: /tmp/passenger-error-xfWMQS.html
+
+[ E 2022-01-19 12:01:28.6354 9967/Te age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 4-1] Cannot checkout session because a spawning error occurred. The identifier of the error is fa3c142f. Please see earlier logs for details about the error.
+App 10159 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 10159 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 10159 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 10159 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 10159 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 10159 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 10159 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 10159 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 10159 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 10159 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 10159 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 10159 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 10159 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 10159 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 10159 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 12:03:13.0759 9967/T1r age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: 71990e96
+  Error details saved to: /tmp/passenger-error-UhQYwP.html
+
+[ E 2022-01-19 12:03:13.0865 9967/Tg age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 5-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 71990e96. Please see earlier logs for details about the error.
+App 10184 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 10184 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 10184 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 10184 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 10184 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 10184 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 10184 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 10184 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 10184 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 10184 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 10184 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 10184 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 10184 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 10184 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 10184 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 12:05:10.7622 9967/T1z age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: f711f6fa
+  Error details saved to: /tmp/passenger-error-mByZcR.html
+
+[ E 2022-01-19 12:05:10.7671 9967/Ti age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 6-1] Cannot checkout session because a spawning error occurred. The identifier of the error is f711f6fa. Please see earlier logs for details about the error.
+App 10258 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 10258 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 10258 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 10258 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 10258 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 10258 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 10258 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 10258 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 10258 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 10258 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 10258 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 10258 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 10258 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 10258 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 10258 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 12:22:49.0879 9967/T27 age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: df8659e6
+  Error details saved to: /tmp/passenger-error-l4quzQ.html
+
+[ E 2022-01-19 12:22:49.0911 9967/Tk age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 7-1] Cannot checkout session because a spawning error occurred. The identifier of the error is df8659e6. Please see earlier logs for details about the error.
+App 10283 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 10283 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 10283 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 10283 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 10283 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 10283 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 10283 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 10283 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 10283 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 10283 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 10283 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 10283 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 10283 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 10283 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 10283 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 12:23:41.9974 9967/T2j age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: 7f4c60b1
+  Error details saved to: /tmp/passenger-error-TM1KWS.html
+
+[ E 2022-01-19 12:23:42.0007 9967/Tm age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 8-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 7f4c60b1. Please see earlier logs for details about the error.
+
+[ N 2022-01-19 13:02:52.4285 9967/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-19 13:02:52.4286 9967/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-19 13:02:52.4288 9967/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-19 13:02:52.4289 9967/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-19 13:02:52.4289 9967/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-19 13:02:52.4290 9967/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-19 13:02:52.4289 9967/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-19 13:02:52.4290 9967/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-19 13:02:52.4291 9967/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-19 13:02:52.4290 9967/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-19 13:02:52.4290 9967/Tm Ser/Server.h:902 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2022-01-19 13:02:52.4293 9967/Tm Ser/Server.h:558 ]: [ServerThr.8] Shutdown finished
+[ N 2022-01-19 13:02:52.4289 9967/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-19 13:02:52.4291 9967/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-19 13:02:52.4292 9967/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-19 13:02:52.4292 9967/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-19 13:02:52.4291 9967/Tk Ser/Server.h:902 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2022-01-19 13:02:52.4296 9967/Tk Ser/Server.h:558 ]: [ServerThr.7] Shutdown finished
+[ N 2022-01-19 13:02:52.4301 9967/To Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-19 13:02:52.4301 9967/To Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-19 13:02:52.9578 9967/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2022-01-19 13:18:40.5725 10359/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ W 2022-01-19 13:18:40.5794 10359/T1 Ser/Server.h:798 ]: [WatchdogApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 13:18:40.5935 10362/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-19 13:18:40.5937 10362/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ W 2022-01-19 13:18:40.6146 10362/T1 Ser/AcceptLoadBalancer.h:295 ]: Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ W 2022-01-19 13:18:40.6146 10362/T1 Ser/Server.h:798 ]: [ApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 13:18:40.6159 10362/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 10362
+[ N 2022-01-19 13:18:43.0574 10362/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 10450 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 10450 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 10450 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 10450 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 10450 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 10450 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 10450 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 10450 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 10450 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 10450 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 10450 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 10450 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 10450 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 10450 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 10450 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 13:18:49.4914 10362/Tr age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: b9319881
+  Error details saved to: /tmp/passenger-error-pKLSzH.html
+
+[ E 2022-01-19 13:18:49.4946 10362/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is b9319881. Please see earlier logs for details about the error.
+[ E 2022-01-19 13:18:49.4946 10362/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is b9319881. Please see earlier logs for details about the error.
+App 10479 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 10479 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 10479 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 10479 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 10479 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 10479 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 10479 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 10479 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 10479 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 10479 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 10479 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 10479 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 10479 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 10479 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 10479 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 13:19:11.1875 10362/T13 age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: 532590c0
+  Error details saved to: /tmp/passenger-error-KCNLaL.html
+
+[ E 2022-01-19 13:19:11.1907 10362/Tc age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 3-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 532590c0. Please see earlier logs for details about the error.
+App 10504 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 10504 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 10504 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 10504 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 10504 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 10504 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 10504 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 10504 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 10504 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 10504 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 10504 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 10504 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 10504 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 10504 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 10504 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 13:19:18.3155 10362/T1b age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: a1fb47c7
+  Error details saved to: /tmp/passenger-error-j6YMVH.html
+
+[ E 2022-01-19 13:19:18.3187 10362/Te age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 4-1] Cannot checkout session because a spawning error occurred. The identifier of the error is a1fb47c7. Please see earlier logs for details about the error.
+
+[ N 2022-01-19 13:58:43.3994 10362/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-19 13:58:43.3996 10362/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-19 13:58:43.3997 10362/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-19 13:58:43.3997 10362/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-19 13:58:43.3999 10362/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-19 13:58:43.3999 10362/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-19 13:58:43.3997 10362/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-19 13:58:43.4000 10362/Tm Ser/Server.h:902 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2022-01-19 13:58:43.4000 10362/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-19 13:58:43.3999 10362/Tk Ser/Server.h:902 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2022-01-19 13:58:43.4001 10362/Tk Ser/Server.h:558 ]: [ServerThr.7] Shutdown finished
+[ N 2022-01-19 13:58:43.3998 10362/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-19 13:58:43.3999 10362/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-19 13:58:43.4000 10362/Tm Ser/Server.h:558 ]: [ServerThr.8] Shutdown finished
+[ N 2022-01-19 13:58:43.3999 10362/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-19 13:58:43.4002 10362/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-19 13:58:43.4002 10362/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-19 13:58:43.4003 10362/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-19 13:58:43.4012 10362/To Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-19 13:58:43.4013 10362/To Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-19 13:58:43.9661 10362/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2022-01-19 13:58:54.6344 10554/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ W 2022-01-19 13:58:54.6545 10554/T1 Ser/Server.h:798 ]: [WatchdogApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 13:58:54.7017 10557/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-19 13:58:54.7025 10557/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ W 2022-01-19 13:58:54.7783 10557/T1 Ser/AcceptLoadBalancer.h:295 ]: Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ W 2022-01-19 13:58:54.7784 10557/T1 Ser/Server.h:798 ]: [ApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 13:58:54.7822 10557/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 10557
+[ N 2022-01-19 13:58:57.2670 10557/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 10645 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 10645 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 10645 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 10645 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 10645 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 10645 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 10645 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 10645 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 10645 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 10645 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 10645 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 10645 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 10645 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 10645 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 10645 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 13:59:11.4709 10557/Tr age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: fb553348
+  Error details saved to: /tmp/passenger-error-hfwtFr.html
+
+[ E 2022-01-19 13:59:11.4881 10557/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is fb553348. Please see earlier logs for details about the error.
+[ E 2022-01-19 13:59:11.4882 10557/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is fb553348. Please see earlier logs for details about the error.
+[ E 2022-01-19 13:59:11.4882 10557/Tc age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 3-1] Cannot checkout session because a spawning error occurred. The identifier of the error is fb553348. Please see earlier logs for details about the error.
+App 10674 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 10674 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 10674 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 10674 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 10674 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 10674 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 10674 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 10674 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 10674 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 10674 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 10674 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 10674 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 10674 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 10674 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 10674 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 13:59:14.8389 10557/T13 age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: a0e088ca
+  Error details saved to: /tmp/passenger-error-BLJPar.html
+
+[ E 2022-01-19 13:59:14.8501 10557/Te age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 4-1] Cannot checkout session because a spawning error occurred. The identifier of the error is a0e088ca. Please see earlier logs for details about the error.
+
+[ N 2022-01-19 14:00:11.7551 10557/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-19 14:00:11.7552 10557/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-19 14:00:11.7554 10557/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-19 14:00:11.7555 10557/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-19 14:00:11.7554 10557/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-19 14:00:11.7554 10557/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-19 14:00:11.7555 10557/Tm Ser/Server.h:902 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2022-01-19 14:00:11.7555 10557/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-19 14:00:11.7559 10557/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-19 14:00:11.7554 10557/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-19 14:00:11.7556 10557/Tk Ser/Server.h:902 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2022-01-19 14:00:11.7556 10557/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-19 14:00:11.7557 10557/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-19 14:00:11.7557 10557/Tm Ser/Server.h:558 ]: [ServerThr.8] Shutdown finished
+[ N 2022-01-19 14:00:11.7558 10557/To Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-19 14:00:11.7555 10557/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-19 14:00:11.7561 10557/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-19 14:00:11.7561 10557/Tk Ser/Server.h:558 ]: [ServerThr.7] Shutdown finished
+[ N 2022-01-19 14:00:11.7563 10557/To Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-19 14:00:11.7563 10557/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-19 14:00:12.2659 10557/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2022-01-19 14:00:19.9049 10721/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ W 2022-01-19 14:00:19.9212 10721/T1 Ser/Server.h:798 ]: [WatchdogApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 14:00:19.9663 10724/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-19 14:00:19.9670 10724/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ W 2022-01-19 14:00:20.0300 10724/T1 Ser/AcceptLoadBalancer.h:295 ]: Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ W 2022-01-19 14:00:20.0300 10724/T1 Ser/Server.h:798 ]: [ApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 14:00:20.0339 10724/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 10724
+[ N 2022-01-19 14:00:22.4552 10724/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 10812 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 10812 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 10812 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 10812 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 10812 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 10812 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 10812 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 10812 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 10812 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 10812 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 10812 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 10812 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 10812 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 10812 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 10812 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 14:00:35.3454 10724/Tr age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: 35156430
+  Error details saved to: /tmp/passenger-error-CqCh54.html
+
+[ E 2022-01-19 14:00:35.3581 10724/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 35156430. Please see earlier logs for details about the error.
+App 10837 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 10837 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 10837 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 10837 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 10837 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 10837 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 10837 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 10837 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 10837 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 10837 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 10837 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 10837 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 10837 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 10837 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 10837 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 14:00:40.2148 10724/T13 age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: 35bf9e49
+  Error details saved to: /tmp/passenger-error-JP07f5.html
+
+[ E 2022-01-19 14:00:40.2200 10724/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 35bf9e49. Please see earlier logs for details about the error.
+
+[ N 2022-01-19 14:30:23.9295 10724/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-19 14:30:23.9296 10724/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-19 14:30:23.9300 10724/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-19 14:30:23.9301 10724/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-19 14:30:23.9302 10724/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-19 14:30:23.9303 10724/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-19 14:30:23.9302 10724/Tk Ser/Server.h:902 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2022-01-19 14:30:23.9304 10724/Tm Ser/Server.h:902 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2022-01-19 14:30:23.9302 10724/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-19 14:30:23.9300 10724/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-19 14:30:23.9304 10724/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-19 14:30:23.9305 10724/Tk Ser/Server.h:558 ]: [ServerThr.7] Shutdown finished
+[ N 2022-01-19 14:30:23.9302 10724/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-19 14:30:23.9305 10724/Tm Ser/Server.h:558 ]: [ServerThr.8] Shutdown finished
+[ N 2022-01-19 14:30:23.9306 10724/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-19 14:30:23.9308 10724/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-19 14:30:23.9308 10724/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-19 14:30:23.9309 10724/To Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-19 14:30:23.9315 10724/To Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-19 14:30:23.9310 10724/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-19 14:30:24.5103 10724/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2022-01-19 16:43:58.6572 11890/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ W 2022-01-19 16:43:58.6681 11890/T1 Ser/Server.h:798 ]: [WatchdogApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 16:43:58.6849 11893/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-19 16:43:58.6865 11893/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ W 2022-01-19 16:43:58.7188 11893/T1 Ser/AcceptLoadBalancer.h:295 ]: Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ W 2022-01-19 16:43:58.7188 11893/T1 Ser/Server.h:798 ]: [ApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 16:43:58.7205 11893/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 11893
+[ N 2022-01-19 16:44:01.2228 11893/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 11981 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 11981 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 11981 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 11981 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 11981 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 11981 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 11981 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 11981 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 11981 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 11981 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 11981 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 11981 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 11981 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 11981 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 11981 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 16:44:07.5459 11893/Tr age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: f8ff54c5
+  Error details saved to: /tmp/passenger-error-KdHrYs.html
+
+[ E 2022-01-19 16:44:07.5507 11893/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is f8ff54c5. Please see earlier logs for details about the error.
+App 12006 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 12006 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 12006 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 12006 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 12006 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 12006 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 12006 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 12006 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 12006 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 12006 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 12006 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 12006 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 12006 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 12006 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 12006 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 16:44:17.6717 11893/T13 age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: e941b3d6
+  Error details saved to: /tmp/passenger-error-pxw3Zs.html
+
+[ E 2022-01-19 16:44:17.6750 11893/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is e941b3d6. Please see earlier logs for details about the error.
+App 12035 output: Error: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+App 12035 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `listen'
+App 12035 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:303:in `block in create_unix_socket_on_filesystem'
+App 12035 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:65:in `block in retry_at_most'
+App 12035 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `times'
+App 12035 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/utils.rb:63:in `retry_at_most'
+App 12035 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:299:in `create_unix_socket_on_filesystem'
+App 12035 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/request_handler.rb:100:in `initialize'
+App 12035 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `new'
+App 12035 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:164:in `block in negotiate_spawn_command'
+App 12035 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:390:in `run_block_and_record_step_progress'
+App 12035 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:163:in `negotiate_spawn_command'
+App 12035 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:211:in `<module:App>'
+App 12035 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 12035 output:     /home/karim/.rvm/gems/ruby-2.6.4/gems/passenger-6.0.8/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2022-01-19 16:44:21.0269 11893/T1b age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application encountered the following error: Address already in use - listen(2) (Errno::EADDRINUSE)
+  Error ID: d2267f9e
+  Error details saved to: /tmp/passenger-error-8mzcku.html
+
+[ E 2022-01-19 16:44:21.0299 11893/Tc age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 3-1] Cannot checkout session because a spawning error occurred. The identifier of the error is d2267f9e. Please see earlier logs for details about the error.
+
+[ N 2022-01-19 16:44:45.1085 11893/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-19 16:44:45.1087 11893/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-19 16:44:45.1089 11893/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-19 16:44:45.1090 11893/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-19 16:44:45.1089 11893/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-19 16:44:45.1092 11893/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-19 16:44:45.1091 11893/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-19 16:44:45.1092 11893/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-19 16:44:45.1093 11893/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-19 16:44:45.1094 11893/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-19 16:44:45.1092 11893/Tm Ser/Server.h:902 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2022-01-19 16:44:45.1094 11893/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-19 16:44:45.1095 11893/Tk Ser/Server.h:902 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2022-01-19 16:44:45.1099 11893/Tk Ser/Server.h:558 ]: [ServerThr.7] Shutdown finished
+[ N 2022-01-19 16:44:45.1096 11893/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-19 16:44:45.1098 11893/Tm Ser/Server.h:558 ]: [ServerThr.8] Shutdown finished
+[ N 2022-01-19 16:44:45.1099 11893/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-19 16:44:45.1095 11893/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-19 16:44:45.1117 11893/To Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-19 16:44:45.1118 11893/To Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-19 16:44:45.6466 11893/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2022-01-19 20:14:16.1745 15549/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ W 2022-01-19 20:14:16.2076 15549/T1 Ser/Server.h:798 ]: [WatchdogApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 20:14:16.9586 15552/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-19 20:14:16.9602 15552/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ W 2022-01-19 20:14:17.0349 15552/T1 Ser/AcceptLoadBalancer.h:295 ]: Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ W 2022-01-19 20:14:17.0349 15552/T1 Ser/Server.h:798 ]: [ApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 20:14:17.0388 15552/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 15552
+[ N 2022-01-19 20:14:19.7562 15552/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+[ E 2022-01-19 20:15:10.8432 15552/Tr age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application process spawned from the preloader seems to have exited prematurely
+  Error ID: fd0c6eb5
+  Error details saved to: /tmp/passenger-error-WSzgJ9.html
+
+[ E 2022-01-19 20:15:10.8564 15552/Tb age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is fd0c6eb5. Please see earlier logs for details about the error.
+[ E 2022-01-19 20:15:10.8564 15552/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is fd0c6eb5. Please see earlier logs for details about the error.
+
+[ N 2022-01-19 20:15:55.7209 15552/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-19 20:15:55.7210 15552/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-19 20:15:55.7211 15552/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-19 20:15:55.7212 15552/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-19 20:15:55.7212 15552/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-19 20:15:55.7213 15552/Tk Ser/Server.h:902 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2022-01-19 20:15:55.7213 15552/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-19 20:15:55.7211 15552/Tb Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-19 20:15:55.7215 15552/Tb Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-19 20:15:55.7212 15552/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-19 20:15:55.7212 15552/Tf Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-19 20:15:55.7216 15552/To Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-19 20:15:55.7214 15552/Tk Ser/Server.h:558 ]: [ServerThr.7] Shutdown finished
+[ N 2022-01-19 20:15:55.7214 15552/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-19 20:15:55.7213 15552/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-19 20:15:55.7216 15552/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-19 20:15:55.7214 15552/Tm Ser/Server.h:902 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2022-01-19 20:15:55.7217 15552/Tf Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-19 20:15:55.7219 15552/Tm Ser/Server.h:558 ]: [ServerThr.8] Shutdown finished
+[ N 2022-01-19 20:15:55.7217 15552/To Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-19 20:15:56.2465 15552/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2022-01-19 20:16:02.7376 15688/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ W 2022-01-19 20:16:02.7659 15688/T1 Ser/Server.h:798 ]: [WatchdogApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 20:16:03.3151 15691/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-19 20:16:03.3155 15691/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ W 2022-01-19 20:16:03.3544 15691/T1 Ser/AcceptLoadBalancer.h:295 ]: Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ W 2022-01-19 20:16:03.3544 15691/T1 Ser/Server.h:798 ]: [ApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 20:16:03.3575 15691/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 15691
+[ N 2022-01-19 20:16:05.9636 15691/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+[ E 2022-01-19 20:16:24.1520 15691/Tr age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application process spawned from the preloader seems to have exited prematurely
+  Error ID: 05d5ad94
+  Error details saved to: /tmp/passenger-error-SAihkG.html
+
+[ E 2022-01-19 20:16:24.1609 15691/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 05d5ad94. Please see earlier logs for details about the error.
+[ E 2022-01-19 20:16:24.1609 15691/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 05d5ad94. Please see earlier logs for details about the error.
+[ E 2022-01-19 20:17:00.4701 15691/Tz age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application process spawned from the preloader seems to have exited prematurely
+  Error ID: 0c0429cb
+  Error details saved to: /tmp/passenger-error-CWiKLG.html
+
+[ E 2022-01-19 20:17:00.4774 15691/Tc age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 3-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 0c0429cb. Please see earlier logs for details about the error.
+
+[ N 2022-01-19 20:17:26.5718 15691/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-19 20:17:26.5720 15691/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-19 20:17:26.5722 15691/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-19 20:17:26.5722 15691/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-19 20:17:26.5724 15691/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-19 20:17:26.5724 15691/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-19 20:17:26.5724 15691/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-19 20:17:26.5724 15691/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-19 20:17:26.5724 15691/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-19 20:17:26.5722 15691/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-19 20:17:26.5733 15691/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-19 20:17:26.5728 15691/Tm Ser/Server.h:902 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2022-01-19 20:17:26.5729 15691/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-19 20:17:26.5738 15691/Tm Ser/Server.h:558 ]: [ServerThr.8] Shutdown finished
+[ N 2022-01-19 20:17:26.5731 15691/To Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-19 20:17:26.5735 15691/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-19 20:17:26.5725 15691/Tk Ser/Server.h:902 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2022-01-19 20:17:26.5730 15691/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-19 20:17:26.5741 15691/To Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-19 20:17:26.5743 15691/Tk Ser/Server.h:558 ]: [ServerThr.7] Shutdown finished
+[ N 2022-01-19 20:17:27.0882 15691/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2022-01-19 20:17:51.7834 15846/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ W 2022-01-19 20:17:51.8069 15846/T1 Ser/Server.h:798 ]: [WatchdogApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 20:17:52.2504 15849/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-19 20:17:52.2509 15849/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ W 2022-01-19 20:17:52.2911 15849/T1 Ser/AcceptLoadBalancer.h:295 ]: Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ W 2022-01-19 20:17:52.2912 15849/T1 Ser/Server.h:798 ]: [ApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 20:17:52.2942 15849/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 15849
+[ N 2022-01-19 20:17:54.9177 15849/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+[ E 2022-01-19 20:18:13.8300 15849/Tr age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application process spawned from the preloader seems to have exited prematurely
+  Error ID: 946b5af6
+  Error details saved to: /tmp/passenger-error-qA249A.html
+
+[ E 2022-01-19 20:18:13.8387 15849/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 946b5af6. Please see earlier logs for details about the error.
+[ E 2022-01-19 20:18:13.8387 15849/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 946b5af6. Please see earlier logs for details about the error.
+
+[ N 2022-01-19 20:19:11.4875 15849/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-19 20:19:11.4876 15849/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-19 20:19:11.4878 15849/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-19 20:19:11.4881 15849/Tk Ser/Server.h:902 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2022-01-19 20:19:11.4882 15849/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-19 20:19:11.4883 15849/Tm Ser/Server.h:902 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2022-01-19 20:19:11.4882 15849/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-19 20:19:11.4879 15849/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-19 20:19:11.4883 15849/Tk Ser/Server.h:558 ]: [ServerThr.7] Shutdown finished
+[ N 2022-01-19 20:19:11.4888 15849/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-19 20:19:11.4882 15849/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-19 20:19:11.4880 15849/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-19 20:19:11.4889 15849/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-19 20:19:11.4890 15849/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-19 20:19:11.4880 15849/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-19 20:19:11.4889 15849/To Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-19 20:19:11.4892 15849/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-19 20:19:11.4884 15849/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-19 20:19:11.4892 15849/To Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-19 20:19:11.4884 15849/Tm Ser/Server.h:558 ]: [ServerThr.8] Shutdown finished
+[ N 2022-01-19 20:19:11.9799 15849/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2022-01-19 20:20:37.9447 15983/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ W 2022-01-19 20:20:37.9561 15983/T1 Ser/Server.h:798 ]: [WatchdogApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 20:20:38.3613 15986/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-19 20:20:38.3617 15986/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ W 2022-01-19 20:20:38.4186 15986/T1 Ser/AcceptLoadBalancer.h:295 ]: Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ W 2022-01-19 20:20:38.4187 15986/T1 Ser/Server.h:798 ]: [ApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 20:20:38.4226 15986/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 15986
+[ N 2022-01-19 20:20:41.0730 15986/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+[ E 2022-01-19 20:20:57.2805 15986/Tr age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application process spawned from the preloader seems to have exited prematurely
+  Error ID: 50ca538f
+  Error details saved to: /tmp/passenger-error-vhS1h0.html
+
+[ E 2022-01-19 20:20:57.2892 15986/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 50ca538f. Please see earlier logs for details about the error.
+[ E 2022-01-19 20:21:15.7051 15986/Tz age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application process spawned from the preloader seems to have exited prematurely
+  Error ID: 4ea9857c
+  Error details saved to: /tmp/passenger-error-v2RuqZ.html
+
+[ E 2022-01-19 20:21:15.7116 15986/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 4ea9857c. Please see earlier logs for details about the error.
+
+[ N 2022-01-19 20:26:29.8229 15986/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-19 20:26:29.8230 15986/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-19 20:26:29.8231 15986/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-19 20:26:29.8232 15986/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-19 20:26:29.8232 15986/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-19 20:26:29.8234 15986/Tm Ser/Server.h:902 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2022-01-19 20:26:29.8233 15986/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-19 20:26:29.8233 15986/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-19 20:26:29.8233 15986/Tk Ser/Server.h:902 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2022-01-19 20:26:29.8234 15986/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-19 20:26:29.8234 15986/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-19 20:26:29.8232 15986/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-19 20:26:29.8236 15986/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-19 20:26:29.8234 15986/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-19 20:26:29.8235 15986/Tm Ser/Server.h:558 ]: [ServerThr.8] Shutdown finished
+[ N 2022-01-19 20:26:29.8236 15986/Tk Ser/Server.h:558 ]: [ServerThr.7] Shutdown finished
+[ N 2022-01-19 20:26:29.8236 15986/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-19 20:26:29.8237 15986/To Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-19 20:26:29.8235 15986/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-19 20:26:29.8239 15986/To Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-19 20:26:30.2530 15986/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2022-01-19 20:26:36.1436 16147/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ W 2022-01-19 20:26:36.1641 16147/T1 Ser/Server.h:798 ]: [WatchdogApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 20:26:36.6665 16150/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-19 20:26:36.6667 16150/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ W 2022-01-19 20:26:36.7127 16150/T1 Ser/AcceptLoadBalancer.h:295 ]: Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ W 2022-01-19 20:26:36.7128 16150/T1 Ser/Server.h:798 ]: [ApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 20:26:36.7157 16150/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 16150
+[ N 2022-01-19 20:26:39.4136 16150/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+[ E 2022-01-19 20:26:58.0123 16150/Tr age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application process spawned from the preloader seems to have exited prematurely
+  Error ID: 27acd531
+  Error details saved to: /tmp/passenger-error-2Sp3Ro.html
+
+[ E 2022-01-19 20:26:58.0204 16150/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 27acd531. Please see earlier logs for details about the error.
+[ E 2022-01-19 20:26:58.0204 16150/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 27acd531. Please see earlier logs for details about the error.
+[ E 2022-01-19 20:27:02.8380 16150/Tz age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application process spawned from the preloader seems to have exited prematurely
+  Error ID: 7f079ef8
+  Error details saved to: /tmp/passenger-error-8ErTzm.html
+
+[ E 2022-01-19 20:27:02.8451 16150/Tc age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 3-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 7f079ef8. Please see earlier logs for details about the error.
+
+[ N 2022-01-19 20:29:47.6575 16150/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-19 20:29:47.6577 16150/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-19 20:29:47.6579 16150/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-19 20:29:47.6580 16150/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-19 20:29:47.6580 16150/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-19 20:29:47.6579 16150/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-19 20:29:47.6581 16150/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-19 20:29:47.6582 16150/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-19 20:29:47.6581 16150/Tm Ser/Server.h:902 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2022-01-19 20:29:47.6583 16150/Tm Ser/Server.h:558 ]: [ServerThr.8] Shutdown finished
+[ N 2022-01-19 20:29:47.6580 16150/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-19 20:29:47.6581 16150/Tk Ser/Server.h:902 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2022-01-19 20:29:47.6580 16150/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-19 20:29:47.6584 16150/Tk Ser/Server.h:558 ]: [ServerThr.7] Shutdown finished
+[ N 2022-01-19 20:29:47.6584 16150/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-19 20:29:47.6584 16150/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-19 20:29:47.6580 16150/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-19 20:29:47.6584 16150/To Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-19 20:29:47.6586 16150/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-19 20:29:47.6586 16150/To Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-19 20:29:48.1554 16150/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2022-01-19 20:29:51.5626 16305/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ W 2022-01-19 20:29:51.5740 16305/T1 Ser/Server.h:798 ]: [WatchdogApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 20:29:52.0473 16308/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-19 20:29:52.0476 16308/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ W 2022-01-19 20:29:52.0970 16308/T1 Ser/AcceptLoadBalancer.h:295 ]: Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ W 2022-01-19 20:29:52.0971 16308/T1 Ser/Server.h:798 ]: [ApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-19 20:29:52.1001 16308/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 16308
+[ N 2022-01-19 20:29:54.7027 16308/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+[ E 2022-01-19 20:30:12.3079 16308/Tr age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application process spawned from the preloader seems to have exited prematurely
+  Error ID: f7e4bcd1
+  Error details saved to: /tmp/passenger-error-RZ93Si.html
+
+[ E 2022-01-19 20:30:12.3189 16308/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is f7e4bcd1. Please see earlier logs for details about the error.
+[ E 2022-01-19 20:30:12.3189 16308/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is f7e4bcd1. Please see earlier logs for details about the error.
+[ E 2022-01-19 20:31:08.8308 16308/Tz age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application process spawned from the preloader seems to have exited prematurely
+  Error ID: f23b0678
+  Error details saved to: /tmp/passenger-error-kDi3Cm.html
+
+[ E 2022-01-19 20:31:08.8373 16308/Tc age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 3-1] Cannot checkout session because a spawning error occurred. The identifier of the error is f23b0678. Please see earlier logs for details about the error.
+
+[ N 2022-01-19 20:32:31.1030 16308/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-19 20:32:31.1030 16308/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-19 20:32:31.1032 16308/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-19 20:32:31.1033 16308/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-19 20:32:31.1033 16308/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-19 20:32:31.1032 16308/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-19 20:32:31.1032 16308/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-19 20:32:31.1034 16308/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-19 20:32:31.1034 16308/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-19 20:32:31.1033 16308/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-19 20:32:31.1034 16308/Tm Ser/Server.h:902 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2022-01-19 20:32:31.1033 16308/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-19 20:32:31.1035 16308/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-19 20:32:31.1035 16308/Tk Ser/Server.h:902 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2022-01-19 20:32:31.1036 16308/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-19 20:32:31.1036 16308/Tm Ser/Server.h:558 ]: [ServerThr.8] Shutdown finished
+[ N 2022-01-19 20:32:31.1037 16308/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-19 20:32:31.1037 16308/To Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-19 20:32:31.1037 16308/Tk Ser/Server.h:558 ]: [ServerThr.7] Shutdown finished
+[ N 2022-01-19 20:32:31.1039 16308/To Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-19 20:32:31.5765 16308/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2022-01-20 21:11:20.1743 17936/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ W 2022-01-20 21:11:20.1857 17936/T1 Ser/Server.h:798 ]: [WatchdogApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-20 21:11:20.5090 17939/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-20 21:11:20.5097 17939/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ W 2022-01-20 21:11:20.5466 17939/T1 Ser/AcceptLoadBalancer.h:295 ]: Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ W 2022-01-20 21:11:20.5466 17939/T1 Ser/Server.h:798 ]: [ApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-20 21:11:20.5483 17939/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 17939
+[ N 2022-01-20 21:11:23.1139 17939/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+[ E 2022-01-20 21:11:32.5522 17939/Tr age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application process spawned from the preloader seems to have exited prematurely
+  Error ID: 75b896b1
+  Error details saved to: /tmp/passenger-error-MHjPjG.html
+
+[ E 2022-01-20 21:11:32.5561 17939/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 75b896b1. Please see earlier logs for details about the error.
+[ E 2022-01-20 21:11:49.4954 17939/Tz age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application process spawned from the preloader seems to have exited prematurely
+  Error ID: d6415b54
+  Error details saved to: /tmp/passenger-error-78W9eG.html
+
+[ E 2022-01-20 21:11:49.5018 17939/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is d6415b54. Please see earlier logs for details about the error.
+[ E 2022-01-20 21:11:50.5632 17939/T13 age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application process spawned from the preloader seems to have exited prematurely
+  Error ID: 67f6ea48
+  Error details saved to: /tmp/passenger-error-AqnOeF.html
+
+[ E 2022-01-20 21:11:50.5672 17939/Tc age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 3-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 67f6ea48. Please see earlier logs for details about the error.
+
+[ N 2022-01-20 21:13:53.2592 17939/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-20 21:13:53.2594 17939/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-20 21:13:53.2597 17939/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-20 21:13:53.2598 17939/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-20 21:13:53.2597 17939/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-20 21:13:53.2600 17939/Tm Ser/Server.h:902 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2022-01-20 21:13:53.2598 17939/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-20 21:13:53.2597 17939/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-20 21:13:53.2599 17939/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-20 21:13:53.2603 17939/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-20 21:13:53.2600 17939/Tk Ser/Server.h:902 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2022-01-20 21:13:53.2601 17939/Tm Ser/Server.h:558 ]: [ServerThr.8] Shutdown finished
+[ N 2022-01-20 21:13:53.2604 17939/Tk Ser/Server.h:558 ]: [ServerThr.7] Shutdown finished
+[ N 2022-01-20 21:13:53.2602 17939/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-20 21:13:53.2602 17939/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-20 21:13:53.2598 17939/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-20 21:13:53.2601 17939/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-20 21:13:53.2605 17939/To Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-20 21:13:53.2608 17939/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-20 21:13:53.2609 17939/To Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-20 21:13:53.5717 18109/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ W 2022-01-20 21:13:53.5785 18109/T1 Ser/Server.h:798 ]: [WatchdogApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-20 21:13:53.7865 17939/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2022-01-20 21:13:53.8794 18112/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-20 21:13:53.8797 18112/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ W 2022-01-20 21:13:53.9099 18112/T1 Ser/AcceptLoadBalancer.h:295 ]: Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ W 2022-01-20 21:13:53.9099 18112/T1 Ser/Server.h:798 ]: [ApiServer] Cannot disable Nagle's algorithm on a TCP socket: Invalid argument (errno=22)
+[ N 2022-01-20 21:13:53.9111 18112/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 18112
+[ N 2022-01-20 21:13:56.3870 18112/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+[ E 2022-01-20 21:14:06.1319 18112/Tr age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /mnt/c/Users/thier/RubymineProjects/MIAGEStage: The application process spawned from the preloader seems to have exited prematurely
+  Error ID: 48152f47
+  Error details saved to: /tmp/passenger-error-aS7IiK.html
+
+[ E 2022-01-20 21:14:06.1374 18112/T9 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 48152f47. Please see earlier logs for details about the error.
+
+[ N 2022-01-20 21:14:36.2561 18112/T9 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-20 21:14:36.2562 18112/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-20 21:14:36.2562 18112/T9 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-20 21:14:36.2563 18112/T9 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-20 21:14:36.2563 18112/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-20 21:14:36.2563 18112/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-20 21:14:36.2563 18112/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-20 21:14:36.2563 18112/Tk Ser/Server.h:902 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2022-01-20 21:14:36.2563 18112/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-20 21:14:36.2563 18112/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-20 21:14:36.2563 18112/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-20 21:14:36.2564 18112/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-20 21:14:36.2563 18112/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-20 21:14:36.2564 18112/Tk Ser/Server.h:558 ]: [ServerThr.7] Shutdown finished
+[ N 2022-01-20 21:14:36.2564 18112/Tm Ser/Server.h:902 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2022-01-20 21:14:36.2564 18112/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-20 21:14:36.2565 18112/Tm Ser/Server.h:558 ]: [ServerThr.8] Shutdown finished
+[ N 2022-01-20 21:14:36.2564 18112/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-20 21:14:36.2565 18112/To Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-20 21:14:36.2565 18112/To Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-20 21:14:36.6634 18112/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished

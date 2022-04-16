@@ -1,0 +1,76 @@
+<div class="bandeauSuperieur d-flex justify-content-center">
+  <span class="mx-4 uppercase font-bold">Inscription étudiante</span>
+</div>
+<p ></p>
+
+<div class="card-body p-2 table-responsive">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "etudiants/shared/error_messages", resource: resource %>
+
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <div class="field mb-3">
+          <%= f.label :email, 'Email universitaire', class: 'form-label' %><br />
+
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control'%>
+          <%= f.hidden_field :email_universitaire, class: 'form-control' %>
+        </div>
+
+        <div class="field mb-3">
+          <%= f.label :password, 'Mot de passe', class: 'form-label' %>
+          <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> caractères minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
+        </div>
+
+        <div class="field mb-3">
+          <%= f.label :password_confirmation, 'Confirmation du mot de passe', class: 'form-label'%><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6">
+        <div class="mb-3">
+          <%= f.label :num_etudiant, 'Numéro étudiant', class: 'form-label'%><br>
+          <%= f.text_field :num_etudiant, class: 'form-control' %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :nom, class: 'form-label' %><br>
+          <%= f.text_field :nom, class: 'form-control' %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :prenom, 'Prénom', class: 'form-label' %><br>
+          <%= f.text_field :prenom, class: 'form-control' %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :email_personnel, class: 'form-label' %><br>
+          <%= f.text_field :email_personnel, class: 'form-control' %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :statut_arrivant_L3, 'Statut arrivant L3', class: 'form-label' %><br>
+          <%= f.select :statut_arrivant_L3, Etudiant.statut_arrivant_L3s.keys, {}, { class: 'form-select' } %>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions d-flex justify-content-end mb-5">
+      <button type="button"
+              style="border: none; outline: none; background: none;"> <%= f.submit "Inscription",  class: 'btn btn-primary'%> </button>
+    </div>
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8">
+
+      </div>
+      <div class="col-2"></div>
+    </div>
+  <% end %>
+
+  <!-- <%= render "etudiants/shared/links" %> -->
+</div>
+

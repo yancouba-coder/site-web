@@ -1,0 +1,56 @@
+<body style="margin-left: 50px;margin-right: 50px">
+<style>
+    tr{
+        border: #BBBBBB solid 1em;
+    }
+    table{
+        border: #BBBBBB solid
+    }
+</style>
+<div>
+  Vous venez de valider la fiche de <% @etu=Etudiant.find_by id: @fichestage.etudiant_id %>
+  <span style="text-transform: uppercase; font-weight: bold">
+    <%= @etu.prenom%>
+ <%=@etu.nom %>
+  </span>
+
+</div>
+
+<div>
+   <h2> Choisissez un tuteur Pour lui</h2>
+  <% @tuteurs=TuteurUniversitaire.all %>
+  <table style="width: 70%;" >
+
+
+    <tr> <th>ID</th><th>Nom</th><th>Prénom</th> <th>email</th> <th> Localisation</th></tr>
+  <%@tuteurs.each do |tuteur| %>
+<tr>
+  <td><%=tuteur.id %></td>
+  <td><%=tuteur.nom %></td>
+  <td><%=tuteur.prenom %></td>
+  <td> <%=tuteur.email %> </td>
+  <td> <%=tuteur.localisation %></td>
+</tr>
+    <%end %>
+
+  </table>
+    <div class="content" style="margin-left: 10%">
+
+
+
+  <%= form_with model: @etu do |form| %>
+        <div class="col-1"  >
+    <div class="full-field">
+      <%= form.label :tuteur_universitaires_id, "ID du tuteur choisis" %>
+      <%= form.number_field :tuteur_universitaires_id %>
+    </div>
+        </div>
+        <span style="display: inline-block;margin-top: 10px"><%= form.submit "Enregistrer", formaction: responsable_stages_changer_tuteur_path, class: 'btn btn-primary' %> </span>
+         <%end %>
+    </div>
+
+
+</div>
+
+
+</body>

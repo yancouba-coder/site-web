@@ -1,0 +1,44 @@
+<%= form_with model: formation, remote: true, local: false do |f| %>
+  <%= f.hidden_field :promotion_id, class: 'form-control', readonly: true %>
+
+  <div class="mb-3">
+    <%= f.label :mention, class: 'form-label' %>
+    <%= f.select :mention, Formation.mentions.keys, {}, { class: 'form-select' } %>
+
+    <% formation.errors.full_messages_for(:mention).each do |message| %>
+      <div class="text-danger" style="font-size: small"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :libelle, class: 'form-label' %>
+    <%= f.text_field :libelle, class: 'form-control' %>
+
+    <% formation.errors.full_messages_for(:libelle).each do |message| %>
+      <div class="text-danger" style="font-size: small"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :email, class: 'form-label' %>
+    <%= f.text_field :email, class: 'form-control' %>
+
+    <% formation.errors.full_messages_for(:email).each do |message| %>
+      <div class="text-danger" style="font-size: small"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :code_ue, 'Code UE', class: 'form-label' %>
+    <%= f.text_field :code_ue, class: 'form-control' %>
+
+    <% formation.errors.full_messages_for(:code_ue).each do |message| %>
+      <div class="text-danger" style="font-size: small"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="d-flex justify-content-end">
+    <%= link_to "Annuler", promotion_path(formation.promotion_id), class: "btn btn-outline-primary me-2"%>
+    <%= f.submit 'Enregister', class: 'btn btn-primary' %>
+  </div>
+<% end %>

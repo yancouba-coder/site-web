@@ -1,0 +1,76 @@
+<div class="bandeauSuperieur d-flex justify-content-center">
+  <span class="mx-4 uppercase font-bold">Entreprises</span>
+</div>
+<div class="d-flex justify-content-end mb-4">
+  <%= link_to new_entreprise_path(@entreprise), remote: true, class: 'btn btn-outline-secondary',
+              data: { "bs-toggle": 'modal', "bs-target": '#newEntrepriseModal' } do %>
+    <%= fa_icon "plus", class: "fa-lg me-1" %> Nouvelle entreprise
+  <% end %>
+</div>
+<div class="card-body p-2">
+  <table class="table tableBleu">
+    <thead>
+    <tr>
+      <th scope="col">Raison sociale</th>
+      <th scope="col">SIREN</th>
+      <th scope="col">Ville</th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @entreprises.each do |e| %>
+      <tr>
+        <td>
+          <%= e.raison_sociale  %>
+        </td>
+        <td>
+          <%= e.siren  %>
+        </td>
+        <td>
+          <%= e.ville  %>
+        </td>
+        <td class="align-middle text-end">
+          <%= link_to edit_entreprise_path(e), remote: true, class: 'me-2',
+                      data: { "bs-toggle": 'modal', "bs-target": '#editEntrepriseModal' } do %>
+            <% fa_icon "edit", class: "fa-2x" %>
+          <% end %>
+
+          <%= link_to entreprise_path(e), method: :delete, class: 'me-2 text-danger',
+                      data: { confirm: "Etes-vous sûr de vouloir supprimer cette formation ?" } do %>
+            <% fa_icon "trash", class: "fa-2x" %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+
+  <!-- New Entreprise Modal -->
+  <div class="modal fade" id="newEntrepriseModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="newEntrepriseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="newEntrepriseModalLabel">Nouvelle entreprise</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body inner-import-new">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Entreprise Modal -->
+  <div class="modal fade" id="editEntrepriseModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editEntrepriseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editEntrepriseModalLabel">Modifier entreprise</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body inner-import-edit">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

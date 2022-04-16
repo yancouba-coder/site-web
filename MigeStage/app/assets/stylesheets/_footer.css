@@ -1,0 +1,10 @@
+
+
+.fixed-bottom {
+    position: relative!important;
+}
+
+footer .btn-floating:hover {
+    background-color: var(--lightgrey) !important;
+    color: var(--darkgrey) !important;
+}

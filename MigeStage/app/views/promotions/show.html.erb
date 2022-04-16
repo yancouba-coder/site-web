@@ -1,0 +1,128 @@
+<div class="bandeauSuperieur d-flex justify-content-center">
+  <span class="mx-4 uppercase font-bold">Promotion <%= @promotion.annee %></span>
+</div>
+<div class="d-flex justify-content-between">
+
+  <div>
+    <% if @promotion.statut == 'OUVERTE' %>
+      <% if @promotion.formations.present? %>
+        <%= link_to "Clôturer", close_promotion_path(@promotion), class: "btn btn-danger me-2",
+                    method: :put,
+                    data: { confirm: "Etes-vous sûr de vouloir clôturer cette promotion ?" } %>
+      <% else %>
+        <%= link_to "Supprimer", promotion_path(@promotion), class: "btn btn-outline-danger",
+                    method: :delete,
+                    data: { confirm: "Etes-vous sûr de vouloir supprimer cette promotion ?" } %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+<div class="d-flex justify-content-between align-items-center mt-4">
+  <h5 class="mb-0">Formations</h5>
+
+  <div>
+    <% if @promotion.statut == 'OUVERTE' %>
+      <%= link_to new_formation_path(@formation, promotion_id: @formation.promotion_id), remote: true, class: "btn btn-outline-secondary",
+                  data: { "bs-toggle": 'modal', "bs-target": '#newFormationModal' } do %>
+        <%= fa_icon "plus", class: 'me-1' %>
+        Nouvelle formation
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<div  class="card-body p-2">
+<table class="table tableBleu">
+  <thead>
+  <tr>
+    <th scope="col">Mention</th>
+    <th scope="col">Email</th>
+    <th scope="col">Code UE</th>
+    <th scope="col">Etudiants</th>
+    <th scope="col" style="width: 5rem"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @promotion.formations.order(:mention).each do |f| %>
+    <tr>
+      <th scope="row"><%= f.mention %></th>
+      <td><%= f.email %></td>
+      <td><%= f.code_ue %></td>
+      <td><%= f.etudiants.count %></td>
+
+      <td class="align-middle text-end">
+        <% if @promotion.OUVERTE? %>
+          <%= link_to edit_formation_path(f), remote: true, class: 'me-2',
+                      data: { "bs-toggle": 'modal', "bs-target": '#editFormationModal' } do %>
+            <% fa_icon "edit", class: "fa-2x" %>
+          <% end %>
+
+          <%= link_to formation_path(f), method: :delete, class: 'me-2 text-danger',
+                      data: { confirm: "Etes-vous sûr de vouloir supprimer cette formation ?" } do %>
+            <% fa_icon "trash", class: "fa-2x" %>
+          <% end %>
+        <% end %>
+        <% if @promotion.CLOTUREE? %>
+          <%= link_to next_formation_path(f), remote: true, class: 'me-2',
+                      data: { "bs-toggle": 'modal', "bs-target": '#nextFormationModal' } do %>
+            <%= fa_icon "arrow-right", class: 'fa-2x text-info' %>
+          <% end %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+</div>
+
+
+
+
+
+<!-- New Formation Modal -->
+<div class="modal fade" id="newFormationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="newFormationModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newFormationModalLabel">Nouvelle formation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body inner-import-new">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Edit Formation Modal -->
+<div class="modal fade" id="editFormationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editFormationModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editFormationModalLabel">Modifier formation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body inner-import-edit">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Next Formation Modal -->
+<div class="modal fade" id="nextFormationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="nextFormationModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="nextFormationModalLabel">Faire passer à l'année suivante</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body inner-import-next">
+      </div>
+    </div>
+  </div>
+</div>

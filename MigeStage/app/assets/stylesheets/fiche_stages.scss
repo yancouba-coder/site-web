@@ -1,0 +1,63 @@
+// Place all the styles related to the fiche_stages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+h1 {
+  text-align: center;
+  padding: 15px;
+  background-color: #8B0146;
+  color: #FFFFFF;
+}
+
+h2 {
+  color: #8B0146;
+  text-transform: uppercase;
+}
+
+.fstitle {
+  background-color: #8B0146;
+}
+
+.statcre {
+  text-align: end;
+  color: #FFFFFF;
+  margin: auto !important;
+}
+
+.vertical-line {
+  border-right: 5px solid #8B0146;
+}
+
+.full-field label, .half-field label {
+  text-transform: uppercase;
+}
+
+.full-field input, .full-field textarea {
+  padding-left: 20px;
+  width: 100%;
+  border-radius: 10px;
+}
+.half-field input, .half-field select {
+  padding-left: 20px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.btn-round {
+  max-width: 100% !important;
+}
+
+.reado input, .reado select, .reado textarea {
+  pointer-events: none;
+}
+
+.reado input[type=submit] {
+  background-color: #CCCCCC !important;
+}
+
+.noreado textarea, .noreado input {
+  pointer-events: initial;
+}
+.noreado input[type=submit] {
+  background-color: #8B0146 !important;
+}

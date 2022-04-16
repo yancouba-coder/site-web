@@ -1,0 +1,23 @@
+<body style="margin-left: 50px;margin-right: 50px">
+<div style="margin-left: 15%">
+
+
+<div class="bandeauSuperieur d-flex justify-content-center">
+  <span  class="mx-4 uppercase font-bold">Fiches de stage à valider</span>
+</div>
+<ul>
+  <% i=0 %>
+  <% @fichestage.each do |fichestage| %>
+
+    <li>
+      <% i=i+1 %>
+      Fiche n°<%= i %> - <%= etu= Etudiant.find_by id: fichestage.etudiant_id
+                                       etu.nom %>--<%= link_to fichestage.titre, fiche_stages_validate_path(fichestage) %>
+                                               --Statut : <%= fichestage.statut %>--
+      <span style="margin-left: 100px;"> Crée le <%=   fichestage.created_at.strftime('%d/%m/%Y') %></span>
+
+    </li>
+  <% end %>
+</ul>
+</div>
+</body>

@@ -1,0 +1,173 @@
+<%= stylesheet_link_tag "tableauDeBord" %>
+
+<div class="bandeauSuperieur d-flex justify-content-center">
+  <span class="mx-4 uppercase font-bold">Tableau de bord</span>
+</div>
+
+<div class="container drop py-3">
+  <select class="dropdown" name="promo" required onChange="window.location.href=this.value">
+
+    <% if @filtre == 'tout' then %>
+      <option selected class="dropdown-item" value="./tableaudebord">Toutes les promotions</option>
+    <% else %>
+      <option class="dropdown-item" value="./tableaudebord">Toutes les promotions</option>
+    <% end %>
+    <% if @filtre == 'L3' then %>
+      <option selected class="dropdown-item" value="./tableaudebord?filtre=L3">L3 MIAGE</option>
+    <% else %>
+      <option class="dropdown-item" value="./tableaudebord?filtre=L3">L3 MIAGE</option>
+    <% end %>
+    <% if @filtre == 'M1' then %>
+      <option selected class="dropdown-item" value="./tableaudebord?filtre=M1">M1 MIAGE</option>
+    <% else %>
+      <option class="dropdown-item" value="./tableaudebord?filtre=M1">M1 MIAGE</option>
+    <% end %>
+    <% if @filtre == 'M2' then %>
+      <option selected class="dropdown-item" value="./tableaudebord?filtre=M2">M2 MIAGE</option>
+    <% else %>
+      <option class="dropdown-item" value="./tableaudebord?filtre=M2">M2 MIAGE</option>
+    <% end %>
+
+  </select>
+</div>
+
+<div class="card-body p-0">
+  <% if @data.present? then %>
+    <% if @data['etudiants'].length > 0 then %>
+
+      <div class="table-responsive p-2">
+        <table class="table table-bordered tableaudebord tableBleu" id="dataTable" width="100%" cellspacing="0" cellpadding="0">
+          <thead>
+          <tr>
+            <th>Etudiant</th>
+            <th>Promotion</th>
+            <th>Entreprise</th>
+            <th>Type</th>
+            <th>Auto-évaluation</th>
+            <th>Grille d'évaluation</th>
+            <th>Auto-évaluation finale</th>
+            <th>Grille d'évaluation finale</th>
+            <th>Note entreprise</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @data['etudiants'].each do |valueData| %>
+
+            <tr>
+              <td>
+                <div class="d-flex flex-column justify-content-between">
+                  <span><%= valueData['nom'] %></span>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex flex-column justify-content-between">
+                  <span><%= valueData['promotion'] %></span>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex flex-column justify-content-between">
+                  <span><%= valueData['entreprise'] %></span>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex flex-column justify-content-between">
+                  <span><%= valueData['type'] %></span>
+                </div>
+              </td>
+
+              <td>
+                <div class="d-flex flex-column justify-content-between">
+                  <% if valueData['idautoevaluation'] == nil then %>
+                    <span class="not-completed">Indisponible</span>
+                  <% else %>
+                    <% if valueData['autoevaluation'] == 1 then %>
+                      <span class="completed">Completée</span>
+                      <button type="button" class="btn btn-round btn-sm px-3 mt-2" onclick="window.location.assign('./evaluation/view/<%= valueData['idautoevaluation'] %>');">Consulter</button>
+                    <% else %>
+                      <span class="not-completed">Non Completée</span>
+                    <% end %>
+                  <% end %>
+                </div>
+              </td>
+
+              <td>
+                <div class="d-flex flex-column justify-content-between">
+                  <% if valueData['idevaluation'] == nil then %>
+                    <span class="not-completed">Indisponible</span>
+                  <% else %>
+                    <% if valueData['grilleevaluation'] == 1 then %>
+                      <span class="completed">Completée</span>
+                      <button type="button" class="btn btn-round btn-sm px-3 mt-2" onclick="window.location.assign('./evaluation/view/<%= valueData['idevaluation'] %>');">Consulter</button>
+                    <% else %>
+                      <span class="not-completed">Non Completée</span>
+                      <button type="button" class="btn btn-round btn-sm px-3 mt-2" onclick="window.location.assign('./evaluation/edit/<%= valueData['idevaluation'] %>');">Remplir</button>
+                    <% end %>
+                  <% end %>
+                </div>
+              </td>
+
+              <td>
+                <div class="d-flex flex-column justify-content-between">
+                  <% if valueData['idautoevaluationfinale'] == nil then %>
+                    <span class="not-completed">Indisponible</span>
+                  <% else %>
+                    <% if valueData['autoevaluationfinale'] == 1 then %>
+                      <span class="completed">Completée</span>
+                      <button type="button" class="btn btn-round btn-sm px-3 mt-2" onclick="window.location.assign('./evaluation/view/<%= valueData['idautoevaluationfinale'] %>');">Consulter</button>
+                    <% else %>
+                      <span class="not-completed">Non Completée</span>
+                    <% end %>
+                  <% end %>
+                </div>
+              </td>
+
+              <td>
+                <div class="d-flex flex-column justify-content-between">
+                  <% if valueData['idevaluationfinale'] == nil then %>
+                    <span class="not-completed">Indisponible</span>
+                  <% else %>
+                    <% if valueData['grilleevaluationfinale'] == 1 then %>
+                      <span class="completed">Completée</span>
+                      <button type="button" class="btn btn-round btn-sm px-3 mt-2" onclick="window.location.assign('./evaluation/view/<%= valueData['idevaluationfinale'] %>');">Consulter</button>
+                    <% else %>
+                      <span class="not-completed">Non Completée</span>
+                      <button type="button" class="btn btn-round btn-sm px-3 mt-2" onclick="window.location.assign('./evaluation/edit/<%= valueData['idevaluationfinale'] %>');">Remplir</button>
+                    <% end %>
+                  <% end %>
+                </div>
+              </td>
+
+              <td>
+                <div class="d-flex flex-column justify-content-between">
+                  <% if valueData['idnote'] == nil then %>
+                    <span class="not-completed">Indisponible</span>
+                  <% else %>
+                    <% if valueData['note'] == 1 then %>
+                      <span class="completed">Completée</span>
+                      <button type="button" class="btn btn-round btn-sm px-3 mt-2" onclick="window.location.assign('./notation/view/<%= valueData['idnote'] %>');">Consulter</button>
+                    <% else %>
+                      <span class="not-completed">Non Completée</span>
+                      <button type="button" class="btn btn-round btn-sm px-3 mt-2" onclick="window.location.assign('./notation/<%= valueData['idnote'] %>');">Remplir</button>
+                    <% end %>
+                  <% end %>
+                </div>
+              </td>
+
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+
+    <% else %>
+
+      <span class="my-5">Aucun étudiant n'est présent dans cette promotion</span>
+      <br><br><br>
+
+    <% end %>
+  <% end %>
+</div>
+
+<div class="d-flex justify-content-center m-2 pt-5">
+  <button class="btn btn-square btn-sm mx-3" onclick="window.open('<%= evaluation_path(format: 'pdf') %>', '_blank');">Télécharger le template grille d'évaluation</button>
+</div>

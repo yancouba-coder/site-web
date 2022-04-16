@@ -1,0 +1,182 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<body style="margin-left: 50px;margin-right: 50px">
+
+<div class="row fstitle" style="margin-right: 90px;margin-left: 140px;">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <h1><%= @proposal.entreprise %></h1>
+    </div>
+    <div class="col-3 statcre">
+        <%= @proposal.sujet %> <br/>
+        Crée le <%= @proposal.created_at.strftime('%d/%m/%Y') %>
+    </div>
+
+</div>
+
+<br/><br/>
+
+<div class="content">
+    <%= form_with model: @proposal do |form| %>
+    <div class="row <%=  'reado' if (@proposal.statut == 'NON POURVU')  %>">
+        <div class="col-6 vertical-line">
+
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <h2>Informations Générales</h2>
+                    <div>
+                        <div class="full-field">
+                            <%= form.label :entreprise, "Entreprise" %>
+                            <%= form.text_field :entreprise %>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-6 half-field">
+                                <%= form.label :typecontrat%>
+                                <%= form.select :typecontrat, ["STAGE","ALTERNANCE", "CDD","CDI"] %>
+                            </div>
+                            <div class="col-6 half-field">
+                                <%= form.label :rh %><br>
+                                <%= form.text_field :rh %>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-6 half-field">
+                                <%= form.label :duree %>
+                                <%= form.text_field :duree %>
+                            </div>
+                            <div class="col-6 half-field">
+                                <%= form.label :email %>
+                                <%= form.text_field :email %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2"></div>
+            </div>
+            <br/><br/><br/>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <
+                    <div>
+                        <div class="full-field">
+                            <%= form.label :telephone %><br>
+                            <%= form.text_field :telepone %>
+                        </div>
+                        <br/>
+                        <div class="full-field">
+                            <%= form.label :adresse, "Adresse" %><br>
+                            <%= form.text_field :adresse %>
+                        </div>
+                        <br/>
+                        <div class="full-field">
+                            <%= form.label :ville, "Ville" %><br>
+                            <%= form.text_field :ville %>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2"></div>
+            </div>
+            <br/><br/><br/>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+
+                    <div>
+                        <div class="full-field">
+                            <%= form.label :technologie, "Technologies" %><br>
+                            <%= form.text_field :technologie %>
+                        </div>
+                        <br/>
+                        <div class="full-field">
+                            <%= form.label :url, "Lien de l'offre" %><br>
+                            <%= form.text_field :url %>
+                        </div>
+                        <br/>
+
+                        <br/>
+
+                        <br/>
+                    </div>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+
+                </div>
+                <div class="col-2"></div>
+            </div>
+            <br/><br/><br/>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+
+                    <div>
+                        <div class="full-field">
+                            <%= form.label :sujet, "sujet" %><br>
+                            <%= form.text_field :sujet %>
+                        </div>
+                        <div class="full-field">
+                            <%= form.label :reference, "reference" %><br>
+                            <%= form.text_field :reference %>
+                        </div>
+
+                        <div class="full-field">
+                            <%= form.label :description, "Description de l'offre" %><br>
+                            <%= form.text_area :description, size:"40x20" %>
+                        </div>
+                      <div class="full-field">
+                       <button style="background-color: #BBBBBB"> <%=link_to 'Télécharger', @proposal.file, download: '' %></button>
+                      </div>
+                      <%if responsable_stage_signed_in? %>
+                      <div class="full-field">
+                        <%=link_to 'Mettre à Pourvu', proposals_changerstatut_path %>
+                        <%end %>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-2"></div>
+            </div>
+            <br/><br/><br/>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <% unless @proposal.errors.full_messages.blank? %>
+                    <h2> Erreurs sur le formulaire</h2>
+                    <%= @proposal.errors.full_messages %>
+                    <% end %>
+
+                </div>
+                <div class="col-2"></div>
+            </div>
+            <br/><br/><br/>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="row">
+                        <div class=""col-4 >
+
+
+                        </div>
+                        <div class="col-4">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+
+        </div>
+
+    </div>
+    <% end %>
+</div>
+</body>
+

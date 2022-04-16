@@ -1,0 +1,62 @@
+<%= form_with(model: liste_etudiant) do |form| %>
+  <% if liste_etudiant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(liste_etudiant.errors.count, "error") %> prohibited this liste_etudiant from being saved:</h2>
+
+      <ul>
+        <% liste_etudiant.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :num_etudiant %>
+    <%= form.number_field :num_etudiant %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nom %>
+    <%= form.text_field :nom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prenom %>
+    <%= form.text_field :prenom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email_universitaire %>
+    <%= form.text_field :email_universitaire %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email_personnel %>
+    <%= form.text_field :email_personnel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :statut_arrivant_L3 %>
+    <%= form.text_field :statut_arrivant_L3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mention %>
+    <%= form.text_field :mention %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stage %>
+    <%= form.text_field :stage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alternance %>
+    <%= form.text_field :alternance %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

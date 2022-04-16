@@ -1,0 +1,26 @@
+<h2>Changer votre mot de passe</h2>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "etudiants/shared/error_messages", resource: resource %>
+  <%= f.hidden_field :reset_password_token %>
+
+  <div class="field mb-3">
+    <%= f.label :password,'Mot de passe', class: 'form-label' %> <i>(laissez vide si vous ne voulez pas le changer )</i><br />
+    <%= f.password_field :password, autocomplete: "new-password",class: 'form-control' %>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> caractères minimum</em>
+    <% end %>
+  </div>
+
+  <div class="field mb-3">
+    <%= f.label :password_confirmation, 'Confirmation du mot de passe', class: 'form-label'%><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+  </div>
+
+  <div class="actions mb-5">
+    <%= f.submit "Changer le mot de passe", class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
+<%= render "etudiants/shared/links" %>

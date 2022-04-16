@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>Informations sur <%= @tuteur_universitaire.nom %> <%= @tuteur_universitaire.prenom %></h1>
+
+
+  <div class="row mb-3">
+    <div class="col text-right">
+      <%= link_to "Revenir à la liste des tuteurs", tuteur_universitaires_path, class: "btn btn-secondary" %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <label>Alias :</label> <%= @tuteur_universitaire.alias %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <label>Adresse Email :</label> <%= @tuteur_universitaire.email %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <label>Fonction :</label> <%= @tuteur_universitaire.fonction %>
+    </div>
+  </div>
+
+
+  <div class="row mb-3">
+    <div class="col">
+      <label>Lieu d'Activité :</label> <%= @tuteur_universitaire.localisation %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <label>Staut de l'encadrant :</label> <%= @tuteur_universitaire.statut_encadrant %>
+    </div>
+  </div>
+</div>

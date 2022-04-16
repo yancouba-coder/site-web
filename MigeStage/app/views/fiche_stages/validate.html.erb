@@ -1,0 +1,217 @@
+
+<body style="margin-left: 50px;margin-right: 50px">
+
+<div class="row fstitle">
+  <div class="col-3"></div>
+  <div class="col-6">
+    <h1><%= @fichestage.titre %></h1>
+  </div>
+  <div class="col-3 statcre">
+    <%= @fichestage.statut %> <br/>
+    Crée le <%= @fichestage.created_at.strftime('%d/%m/%Y') %>
+  </div>
+
+</div>
+
+<br/><br/>
+
+<div class="content">
+  <%= form_with model: @fichestage do |form| %>
+    <div class="row reado">
+      <div class="col-6 vertical-line">
+
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <h2>Informations Générales</h2>
+            <div>
+              <div class="full-field">
+                <%= form.label :titre, "Titre de la fiche de stage" %>
+                <%= form.text_field :titre %>
+              </div>
+              <br/>
+              <div class="row">
+                <div class="col-6 half-field">
+                  <%= form.label :mention %>
+                  <%= form.select :mention, ["L3","M1", "M2"] %>
+                </div>
+                <div class="col-6 half-field">
+                  <%= form.label :type_stage %><br>
+                  <%= form.select :type_stage, ["ALTERNANCE","STAGE"] %>
+                </div>
+              </div>
+              <br/>
+              <div class="row">
+                <div class="col-6 half-field">
+                  <%= form.label :date_debut %>
+                  <%= form.date_field :date_debut %>
+                </div>
+                <div class="col-6 half-field">
+                  <%= form.label :date_fin %>
+                  <%= form.date_field :date_fin %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+        <br/><br/><br/>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <h2>Informations sur le Poste</h2>
+            <div>
+              <div class="full-field">
+                <%= form.label :poste, "Intitulé du poste" %><br>
+                <%= form.text_field :poste %>
+              </div>
+              <br/>
+              <div class="full-field">
+                <%= form.label :taches, "Sujet de stage" %><br>
+                <%= form.text_area :taches %>
+              </div>
+              <br/>
+              <div class="full-field">
+                <%= form.label :technologies, "Technologies employées" %><br>
+                <%= form.text_area :technologies %>
+              </div>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+        <br/><br/><br/>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <h2>Informations sur le Tuteur</h2>
+            <div>
+              <div class="full-field">
+                <%= form.label :tuteur_nom, "Nom" %><br>
+                <%= form.text_field :tuteur_nom %>
+              </div>
+              <br/>
+              <div class="full-field">
+                <%= form.label :tuteur_prenom, "Prénom" %><br>
+                <%= form.text_field :tuteur_prenom %>
+              </div>
+              <br/>
+              <div class="full-field">
+                <%= form.label :tuteur_fonction, "Fonction" %><br>
+                <%= form.text_field :tuteur_fonction %>
+              </div>
+              <br/>
+              <div class="full-field">
+                <%= form.label :tuteur_telephone, "Téléphone" %><br>
+                <%= form.telephone_field :tuteur_telephone %>
+              </div>
+              <br/>
+              <div class="full-field">
+                <%= form.label :tuteur_email, "Email" %><br>
+                <%= form.text_field :tuteur_email %>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <h2>Informations sur l'entreprise</h2>
+            <div>
+              <div class="full-field">
+                <%= form.label :entreprise_nom, "Raison sociale de l'entreprise" %><br>
+                <%= form.text_field :entreprise_nom %>
+              </div>
+              <br/>
+              <div class="full-field">
+                <%= form.label :entreprise_siren, "Numéro SIREN de l'entreprise" %><br>
+                <%= form.text_field :entreprise_siren %>
+              </div>
+              <br/>
+              <div class="row">
+                <div class="col-6 half-field">
+                  <%= form.label :entreprise_cp, "Code Postal" %><br>
+                  <%= form.text_field :entreprise_cp %>
+                </div>
+                <div class="col-6 half-field">
+                  <%= form.label :entreprise_ville, "Ville" %><br>
+                  <%= form.text_field :entreprise_ville %>
+                </div>
+              </div>
+              <br/>
+              <div class="full-field">
+                <%= form.label :entreprise_pays, "Pays" %><br>
+                <%= form.telephone_field :entreprise_pays %>
+              </div>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+        <br/><br/><br/>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <h2>Informations sur le signataire</h2>
+            <div>
+              <div class="full-field">
+                <%= form.label :contact_nom, "Nom" %><br>
+                <%= form.text_field :contact_nom %>
+              </div>
+              <br/>
+              <div class="full-field">
+                <%= form.label :contact_prenom, "Prénom" %><br>
+                <%= form.text_field :contact_prenom %>
+              </div>
+              <br/>
+              <div class="full-field">
+                <%= form.label :contact_poste, "Fonction" %><br>
+                <%= form.text_field :contact_poste %>
+              </div>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+        <br/><br/><br/>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <h2>Commentaires de validation</h2>
+            <div>
+              <div class="full-field noreado">
+                <%= form.label :commentaire_validation, "Commentaires de validation" %><br>
+                <%= form.text_area :commentaire_validation %>
+              </div>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+        <br/><br/><br/>
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-10">
+            <div class="row">
+              <div class="col-4 noreado">
+                <%= link_to 'Valider',
+                            fiche_stages_cvalidee_path,class: "btn btn-primary btn-round" %>
+              </div>
+              <div class="col-4 noreado">
+                <%= link_to 'Refuser',
+                            fiche_stages_crefusee_path, class: "btn btn-primary btn-round" %>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  <% end %>
+</div>
+
+</body>

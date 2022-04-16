@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<style>
+    tr{
+        border: #BBBBBB solid 1em;
+    }
+    table{
+        border: #BBBBBB solid
+    }
+</style>
+
+<h1>Liste de tous les étudiants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Num etudiant</th>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Email universitaire</th>
+      <th>Email personnel</th>
+      <th>Statut arrivant l3</th>
+      <th>Mention</th>
+      <th>Stage</th>
+      <th>Alternance</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @liste_etudiants.each do |liste_etudiant| %>
+      <tr>
+        <td><%= liste_etudiant.num_etudiant %></td>
+        <td><%= liste_etudiant.nom %></td>
+        <td><%= liste_etudiant.prenom %></td>
+        <td><%= liste_etudiant.email_universitaire %></td>
+        <td><%= liste_etudiant.email_personnel %></td>
+        <td><%= liste_etudiant.statut_arrivant_L3 %></td>
+        <td><%= liste_etudiant.mention %></td>
+        <td><%= liste_etudiant.stage %></td>
+        <td><%= liste_etudiant.alternance %></td>
+
+        <td><%= link_to 'Consulter', liste_etudiant %></td>
+        <td><%= link_to 'Editer', edit_liste_etudiant_path(liste_etudiant) %></td>
+        <td><%= button_to 'Supprimer', liste_etudiant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<h3>Importer les Etudiants</h3>
+<%= form_tag import_liste_etudiants_path, multipart: true  do%>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Charger le contenue du fichier" %>
+<% end %>
+
+<%= link_to 'Ajouter un etudiant', new_liste_etudiant_path %>
+

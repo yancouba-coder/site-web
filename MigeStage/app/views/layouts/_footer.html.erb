@@ -1,0 +1,46 @@
+<footer class="text-white fixed-bottom bg-darkgrey">
+  <!-- Grid container -->
+  <div class="p-4 pb-0 m-0">
+    <div class="row">
+      <div class="col-auto">
+        <div class="container pb-4">
+          <h5>RESPONSABLE DES STAGES</h5>
+          <%
+            require 'json'
+            my_hash = ''
+            File.open(Rails.root.to_s + '/app/assets/config/responsable.json') do |f|
+              my_hash = JSON.parse(f.read)
+            end
+          %>
+          <span class="mb-2"><%= fa_icon "user", class: "fa-lg me-1" %> <%= my_hash['nom'] %></span>
+          <br/>
+          <span class="mb-2"><%= fa_icon "envelope", class: "fa-lg me-1" %> <%= my_hash['email'] %></span>
+          <br/>
+          <span class="mb-2"><%= fa_icon "phone", class: "fa-lg me-1" %> <%= my_hash['telephone'] %></span>
+        </div>
+      </div>
+      <div class="col" style="text-align: center">
+        <div class="container pb-4">
+          <h5 class="pb-3">A PROPOS</h5>
+          <a class="btn btn-outline-light btn-floating m-1" href="https://fr.linkedin.com/company/miage-connection" role="button">
+            <%= fa_icon "linkedin", class: "fa-lg me-1" %>
+          </a>
+          <a class="btn btn-outline-light btn-floating m-1" href="https://miage-bordeaux.fr/" role="button">
+            <%= fa_icon "google", class: "fa-lg me-1" %>
+          </a>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="container text-right pb-4">
+          <h5>UNIVERSITE DE BORDEAUX</h5>
+          <span class="mb-2"> Campus de Talence</span>
+          <br/>
+          <span class="mb-2"> 351 Cours de la Liberation</span>
+          <br/>
+          <span class="mb-2"> 33400 TALENCE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Grid container -->
+</footer>
